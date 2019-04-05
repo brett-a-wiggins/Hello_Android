@@ -5,4 +5,8 @@
     <string name="logo">App logo</string>
     <string name="image">image</string>
     <string name="saved_vehicle">Saved Vehicles</string>
+    <string name="fill_up">Fill Up Vehicle</string>
+    <string name="service_vehicle">Service Vehicle</string>
+    <string name="display_stats">Display Fuel Use Statistics</string>
+    <string name="options">Options</string>
 </resources>
