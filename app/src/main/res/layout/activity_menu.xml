@@ -13,7 +13,7 @@
         app:srcCompat="@drawable/LogoMakr_71I4rM" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/stats_button"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="@string/display_stats" />
@@ -24,7 +24,7 @@
         android:layout_height="27dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/fillup_button"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="@string/fill_up" />
@@ -34,7 +34,7 @@
         android:layout_height="37dp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/service_button"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="@string/service_vehicle" />
@@ -44,7 +44,7 @@
         android:layout_height="34dp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/options_button"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="@string/options" />

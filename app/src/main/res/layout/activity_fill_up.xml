@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FillUPActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_descr"
+            app:srcCompat="@drawable/LogoMakr_71I4rM" />
+
+        <EditText
+            android:id="@+id/editTextOdometer"
+            android:autofillHints="@string/odometer"
+            android:hint="@string/hint_odometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="@string/odometer" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="38dp" />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:autofillHints="@string/date"
+            android:hint="@string/hint_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:text="@string/date" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="36dp" />
+
+        <EditText
+            android:id="@+id/editTextPricePerLtr"
+            android:autofillHints="@string/price_per_lt"
+            android:hint="@string/hint_litres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/price_per_lt" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="36dp" />
+
+        <EditText
+            android:id="@+id/editTextLtrPumped"
+            android:autofillHints="@string/ltr_pumped"
+            android:hint="@string/hint_litres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="@string/ltr_pumped" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="37dp" />
+
+        <EditText
+            android:id="@+id/editTextLocation"
+            android:autofillHints="@string/location"
+            android:hint="@string/hint_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/location" />
+
+        <Button
+            android:id="@+id/buttonSubmitMenu"
+            android:layout_width="178dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/submit_button" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
