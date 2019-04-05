@@ -21,4 +21,13 @@
     <stirng name="hint_price">20.00</stirng>
     <string name="hint_litres">20</string>
     <string name="hint_location">Melbourne</string>
+    <string name="add_new_vehicle">ADD NEW VEHICLE</string>
+    <string name="notes">Enter Notes Here</string>
+    <string name="add_button">ADD</string>
+    <string name="rego_string">Registration</string>
+    <string name="enter_rego">Enter Registration Here</string>
+    <string name="label_rego">Registration</string>
+    <string name="label_odometer">Odometer</string>
+    <string name="label_service">Next Service</string>
+    <string name="label_fuel">Fuel Type</string>
 </resources>
