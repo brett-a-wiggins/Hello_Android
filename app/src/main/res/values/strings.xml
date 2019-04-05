@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Hello_Android</string>
+    <string name="content_descr">App Logo</string>
     <string name="heading_text">Welcome to Guzzle</string>
     <string name="start_button">Add new Vehicle</string>
     <string name="logo">App logo</string>
@@ -9,4 +10,15 @@
     <string name="service_vehicle">Service Vehicle</string>
     <string name="display_stats">Display Fuel Use Statistics</string>
     <string name="options">Options</string>
+    <string name="odometer">Enter Odometer Here</string>
+    <string name="date">Enter Date Here</string>
+    <string name="price_per_lt">Enter Price Per Litre Here</string>
+    <string name="ltr_pumped">Enter Litres Pumped here</string>
+    <string name="location">Enter Location Here</string>
+    <string name="submit_button">Submit</string>
+    <string name="hint_odometer">odometer</string>
+    <string name="hint_date">04/04/2019</string>
+    <stirng name="hint_price">20.00</stirng>
+    <string name="hint_litres">20</string>
+    <string name="hint_location">Melbourne</string>
 </resources>
