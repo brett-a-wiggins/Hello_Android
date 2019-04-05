@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="#000000"
+            android:padding="10dp"
             android:text="@string/add_new_vehicle"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
@@ -35,7 +36,7 @@
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="229dp">
+            android:layout_height="280dp">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -44,8 +45,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
                     android:background="#000000"
                     android:gravity="center"
+                    android:padding="10dp"
                     android:text="@string/label_rego"
                     android:textColor="#FFFFFF"
                     android:textSize="26sp" />
@@ -62,8 +65,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
                     android:background="#000000"
                     android:gravity="center"
+                    android:padding="10dp"
                     android:text="@string/label_odometer"
                     android:textColor="#FFFFFF"
                     android:textSize="26sp" />
@@ -80,8 +85,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
                     android:background="#000000"
                     android:gravity="center"
+                    android:padding="10dp"
                     android:text="@string/label_service"
                     android:textColor="#FFFFFF"
                     android:textSize="26sp" />
@@ -98,8 +105,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
                     android:background="#000000"
                     android:gravity="center"
+                    android:padding="10dp"
                     android:text="@string/label_fuel"
                     android:textColor="#FFFFFF"
                     android:textSize="26sp" />
@@ -111,15 +120,15 @@
         </TableLayout>
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/editText5"
             android:layout_width="match_parent"
-            android:layout_height="207dp"
+            android:layout_height="147dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="@string/notes" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
