@@ -36,4 +36,5 @@
     <string name="odometer_distance_travelled">Travelled</string>
     <string name="from_date">Previous Date Recorded</string>
     <string name="to_date">Last Date Recorded</string>
+    <string name="enter_text">Enter text here.</string>
 </resources>
