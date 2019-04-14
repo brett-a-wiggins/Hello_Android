@@ -30,4 +30,10 @@
     <string name="label_odometer">Odometer</string>
     <string name="label_service">Next Service</string>
     <string name="label_fuel">Fuel Type</string>
+    <string name="title_activity_odometer">OdometerActivity</string>
+    <string name="previous_odometer_read">Previous Odometer Reading</string>
+    <string name="current_odometer_read">Current Odometer Reading</string>
+    <string name="odometer_distance_travelled">Travelled</string>
+    <string name="from_date">Previous Date Recorded</string>
+    <string name="to_date">Last Date Recorded</string>
 </resources>
