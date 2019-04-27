@@ -39,4 +39,6 @@
     <string name="enter_text">Enter text here.</string>
     <string name="travel_log">Travel Log.</string>
     <string name="project_logo">Project Logo</string>
+    <string name="dots">....</string>
+    <string name="hint">Enter Data Here.</string>
 </resources>
