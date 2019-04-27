@@ -18,7 +18,7 @@
     <string name="submit_button">Submit</string>
     <string name="hint_odometer">odometer</string>
     <string name="hint_date">04/04/2019</string>
-    <stirng name="hint_price">20.00</stirng>
+    <string name="hint_price">20.00</string>
     <string name="hint_litres">20</string>
     <string name="hint_location">Melbourne</string>
     <string name="add_new_vehicle">ADD NEW VEHICLE</string>
@@ -38,4 +38,5 @@
     <string name="to_date">Last Date Recorded</string>
     <string name="enter_text">Enter text here.</string>
     <string name="travel_log">Travel Log.</string>
+    <string name="project_logo">Project Logo</string>
 </resources>

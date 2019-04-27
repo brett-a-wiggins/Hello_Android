@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@string/content_descr"
-            app:srcCompat="@drawable/LogoMakr_71I4rM" />
+            app:srcCompat="@drawable/logo" />
 
         <EditText
             android:id="@+id/editTextOdometer"
