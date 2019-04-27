@@ -49,4 +49,13 @@
         android:layout_height="wrap_content"
         android:text="@string/options" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="34dp" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/travel_log"/>
+
 </LinearLayout>

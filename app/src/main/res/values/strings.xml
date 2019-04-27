@@ -37,4 +37,5 @@
     <string name="from_date">Previous Date Recorded</string>
     <string name="to_date">Last Date Recorded</string>
     <string name="enter_text">Enter text here.</string>
+    <string name="travel_log">Travel Log.</string>
 </resources>
