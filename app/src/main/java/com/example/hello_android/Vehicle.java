@@ -8,4 +8,5 @@ abstract class Vehicle {
     private String registration;
     private Date serviceDate;
     private int odometer;
+    private String fuelType;
 }
