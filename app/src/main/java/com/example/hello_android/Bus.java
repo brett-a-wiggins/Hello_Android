@@ -1,6 +1,11 @@
 package com.example.hello_android;
 
 public class Bus extends Vehicle {
-    private int numPassengers;
+
+
+    public Bus(VehicleOwner owner, String registration, int odometer) {
+        super(owner, registration);
+        this.odometer = odometer;
+    }
 }
 
