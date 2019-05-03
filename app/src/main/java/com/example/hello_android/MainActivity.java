@@ -6,9 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     private Button mSavedVehicleButton;
     private Button mNewVehicleButton;
+    public static ArrayList<Vehicle> vehicleList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
