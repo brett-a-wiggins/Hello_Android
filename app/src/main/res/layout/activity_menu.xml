@@ -9,12 +9,13 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical">
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo"
-        android:contentDescription="@string/project_logo"/>
+        android:contentDescription="@string/project_logo"
+        app:srcCompat="@drawable/logo" />
 
     <Button
         android:id="@+id/stats_button"

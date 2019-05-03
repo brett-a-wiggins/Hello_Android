@@ -6,19 +6,21 @@ import java.util.ArrayList;
 import java.util.Date;
 
 abstract class Vehicle {
-    private VehicleOwner owner;
     private String registration;
     //private Date serviceDate; Shouldnt this be in service transaction inherited from transaction?
     protected int odometer;
     private ArrayList<FuelTransaction> fuelTransList;
     private ArrayList<ServiceTransaction> serviceTransList;
 
-    public Vehicle (VehicleOwner owner, String registration) {
-        this.owner = owner;
+    public Vehicle (String registration) {
         this.registration = registration;
         this.odometer = 0;
         this.fuelTransList = new ArrayList<>();
         this.serviceTransList = new ArrayList<>();
+    }
+
+    public Vehicle() {
+
     }
 
     private String addFuelTransaction(Date transactionDate, BigDecimal costPerLitre, BigDecimal totalCost, double litresPumped){

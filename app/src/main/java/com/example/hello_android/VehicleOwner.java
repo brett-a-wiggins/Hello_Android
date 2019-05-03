@@ -1,10 +1,13 @@
 package com.example.hello_android;
 
+import java.util.ArrayList;
+
 public class VehicleOwner {
     private String ownerName;
     private String ownerAddress;
     private String ownerPhone;
     private String ownerEmail;
+    private static ArrayList<Vehicle> vehicleList;
 
     public VehicleOwner(String newName,String newAddress, String newPhone,
                             String newEmail){
@@ -12,6 +15,7 @@ public class VehicleOwner {
         ownerAddress = newAddress;
         ownerPhone = newPhone;
         ownerEmail = newEmail;
+        vehicleList = new ArrayList<>();
     }
 
     public VehicleOwner(){
@@ -20,6 +24,7 @@ public class VehicleOwner {
         ownerPhone = null;
         ownerEmail = null;
     }
+    public static ArrayList getVehicleList() { return vehicleList; }
 
     public String getOwnerName() {
         return ownerName;

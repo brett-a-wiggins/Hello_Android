@@ -17,8 +17,8 @@ public class Truck extends Vehicle {
 //      this.dangerousGoods = dangerousGoods;
 //    }
 
-    public Truck(VehicleOwner owner, String registration){
-        super(owner, registration);
+    public Truck(String registration){
+        super(registration);
 //        this.fuelType = null;
 //        this.numOfWheels = 0;
 //        this.vehicleHeight = 0;

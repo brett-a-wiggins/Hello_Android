@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private Button mSavedVehicleButton;
     private Button mNewVehicleButton;
-    public static ArrayList<Vehicle> vehicleList = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
