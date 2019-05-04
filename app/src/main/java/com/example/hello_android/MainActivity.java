@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
    private Button newUserButton;
    private Button existingUserButton;
-   private static ArrayList ownerList;
+   protected static ArrayList ownerList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,ExistingUserActivity.class);
+                intent.putStringArrayListExtra("ownerList",ownerList);
                 startActivity(intent);
             }
         });

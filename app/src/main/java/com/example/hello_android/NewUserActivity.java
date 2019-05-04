@@ -12,13 +12,14 @@ import java.util.ArrayList;
 public class NewUserActivity extends AppCompatActivity {
     private Button addUserButton;
     private TextView userNameText;
-    private ArrayList ownerList;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_user);
-        this.ownerList = MainActivity.getOwnerList();
+
 
         userNameText = findViewById(R.id.owner_name_text);
 
@@ -29,8 +30,8 @@ public class NewUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String userName = userNameText.getText().toString();
-                ownerList.add(new VehicleOwner(userName));
-                Intent intent = new Intent(NewUserActivity.this,MenuActivity.class);
+                MainActivity.ownerList.add(new VehicleOwner(userName));
+                Intent intent = new Intent(NewUserActivity.this,MainActivity.class);
                 startActivity(intent);
             }
         });

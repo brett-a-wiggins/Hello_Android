@@ -57,4 +57,5 @@
     <string name="add_boat">Add Boat</string>
     <string name="add_motorcycle">Add Motorcycle</string>
     <string name="add_new_car">Add new Car</string>
+    <string name="select_user">Select User</string>
 </resources>

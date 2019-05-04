@@ -31,6 +31,12 @@ public class VehicleOwner {
         ownerPhone = null;
         ownerEmail = null;
     }
+
+    @Override
+    public String toString() {
+        return this.ownerName;
+    }
+
     public static ArrayList getVehicleList() { return vehicleList; }
 
     public String getOwnerName() {
