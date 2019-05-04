@@ -18,6 +18,13 @@ public class VehicleOwner {
         vehicleList = new ArrayList<>();
     }
 
+    public VehicleOwner(String newName) {
+        this.ownerName = newName;
+        this.ownerAddress = null;
+        this.ownerEmail = null;
+        this.ownerPhone = null;
+    }
+
     public VehicleOwner(){
         ownerName = null;
         ownerAddress = null;

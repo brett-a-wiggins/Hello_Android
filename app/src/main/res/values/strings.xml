@@ -41,4 +41,8 @@
     <string name="project_logo">Project Logo</string>
     <string name="dots">....</string>
     <string name="hint">Enter Data Here.</string>
+    <string name="roadimagebackground">roadImageBackground</string>
+    <string name="enter_new_user_details">Enter new user details</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
 </resources>

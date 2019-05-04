@@ -10,31 +10,38 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private Button mSavedVehicleButton;
-    private Button mNewVehicleButton;
-
+   private Button newUserButton;
+   private Button existingUserButton;
+   private static ArrayList ownerList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_second);
 
-        mSavedVehicleButton =  findViewById(R.id.saved_vehicle_button);
-        mSavedVehicleButton.setOnClickListener(new View.OnClickListener() {
+        this.ownerList = new ArrayList();
+
+        newUserButton =  findViewById(R.id.new_user_button);
+        newUserButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,MenuActivity.class);
+                Intent intent = new Intent(MainActivity.this,NewUserActivity.class);
                 startActivity(intent);
             }
         });
-        mNewVehicleButton =  findViewById(R.id.add_new_vehicle_button);
-        mNewVehicleButton.setOnClickListener(new View.OnClickListener() {
+        existingUserButton =  findViewById(R.id.add_new_vehicle_button);
+        existingUserButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,AddNewVehicle.class);
+                Intent intent = new Intent(MainActivity.this,ExistingUserActivity.class);
                 startActivity(intent);
             }
         });
     }
+
+    public static ArrayList getOwnerList(){
+        return ownerList;
+    }
+
 }

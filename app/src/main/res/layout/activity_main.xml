@@ -1,45 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
-
+    android:tooltipText="Choose Owner">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="343dp"
-        android:layout_height="109dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/image"
+        android:id="@+id/imageView12"
+        android:layout_width="487dp"
+        android:layout_height="285dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/kisspng_road_royalty_free_illustration_landmarks_road_vector_5a86178550f0d3_7634598815187372853315" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="222dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
-    <TextView
+    <Button
+        android:id="@+id/existing_user_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="24dp"
-        android:text="@string/heading_text" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/add_new_vehicle_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/start_button" />
-
-
-
-    </LinearLayout>
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#04FDA6"
+        android:text="Existing User"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
     <Button
-        android:id="@+id/saved_vehicle_button"
+        android:id="@+id/new_user_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/saved_vehicle" />
-
-</LinearLayout>
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#06FDA7"
+        android:text="New User"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/existing_user_button" />
+</android.support.constraint.ConstraintLayout>
