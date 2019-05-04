@@ -17,12 +17,12 @@ public class NewUserActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_new_car);
+        setContentView(R.layout.activity_new_user);
         this.ownerList = MainActivity.getOwnerList();
 
         userNameText = findViewById(R.id.owner_name_text);
 
-        addUserButton =  findViewById(R.id.add_user_button);
+        addUserButton = findViewById(R.id.add_user_button);
         addUserButton.setOnClickListener(new View.OnClickListener() {
 
 
