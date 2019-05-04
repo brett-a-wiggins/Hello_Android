@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:tooltipText="Choose an option" tools:targetApi="o">
+    android:tooltipText="Choose an option">
 
 
     <ImageView

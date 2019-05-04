@@ -14,19 +14,18 @@ public class ExistingUserActivity extends AppCompatActivity {
     private Button selectUserButton;
     private VehicleOwner owner;
     private Spinner userSpinner;
-    private ArrayList ownerList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_existing_user);
         //this.ownerList = getIntent().getStringArrayListExtra("ownerList");
-        ownerList = MainActivity.ownerList;
+//        ownerList = MainActivity.ownerList;
         userSpinner = this.findViewById(R.id.user_spinner);
         ArrayAdapter userListAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, MainActivity.ownerList);
         userListAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        ownerList.add("Ryan");
-        ownerList.add("Craig");
+        MainActivity.addOwner("Default");
+        MainActivity.ownerList.add("Default2");
 
         userSpinner.setAdapter(userListAdapter);
 

@@ -22,6 +22,7 @@ public class NewUserActivity extends AppCompatActivity {
 
 
         userNameText = findViewById(R.id.owner_name_text);
+        String userName = userNameText.getText().toString();
 
         addUserButton = findViewById(R.id.add_user_button);
         addUserButton.setOnClickListener(new View.OnClickListener() {
@@ -30,7 +31,7 @@ public class NewUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String userName = userNameText.getText().toString();
-                MainActivity.ownerList.add(new VehicleOwner(userName));
+                MainActivity.addOwner(userName);
                 Intent intent = new Intent(NewUserActivity.this,MainActivity.class);
                 startActivity(intent);
             }

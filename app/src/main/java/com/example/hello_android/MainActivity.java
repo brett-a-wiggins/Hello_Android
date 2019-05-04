@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.ownerList = new ArrayList();
+        this.ownerList = new ArrayList<VehicleOwner>();
 
         this.newUserButton = findViewById(R.id.new_user_button);
         this.newUserButton.setOnClickListener(new View.OnClickListener() {
@@ -41,8 +41,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public static ArrayList getOwnerList(){
-        return ownerList;
+    public static void addOwner(String ownerName) {
+        ownerList.add(new VehicleOwner(ownerName));
+    }
+
+    public ArrayList<VehicleOwner> getOwnerList(){
+        return this.ownerList;
     }
 
 }

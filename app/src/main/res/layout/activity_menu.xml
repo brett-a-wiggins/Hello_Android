@@ -1,66 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:gravity="center" >
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="222dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="50dp"
         android:contentDescription="@string/project_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
     <Button
-        android:id="@+id/stats_button"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="@string/display_stats" />
-
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="27dp" />
-
-    <Button
-        android:id="@+id/fillup_button"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="@string/fill_up" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="37dp" />
+        android:id="@+id/add_new_vehicle_menu_button"
+        android:layout_width="231dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="16dp"
+        android:soundEffectsEnabled="true"
+        android:text="@string/add_new_vehicle"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_vehicle_button" />
 
     <Button
-        android:id="@+id/service_button"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="@string/service_vehicle" />
+        android:id="@+id/select_vehicle_button"
+        android:layout_width="231dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp"
+        android:shadowColor="#00852D2D"
+        android:soundEffectsEnabled="true"
+        android:text="@string/select_vehicle"
+        android:textColor="#000000"
+        android:textColorHint="#61B1F4"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="34dp" />
-
-    <Button
-        android:id="@+id/options_button"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="@string/options" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="34dp" />
-
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="@string/travel_log"/>
-</LinearLayout>
-</ScrollView>
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="407dp"
+        android:layout_height="335dp"
+        android:contentDescription="@string/roadimagebackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/kisspng_road_royalty_free_illustration_landmarks_road_vector_5a86178550f0d3_7634598815187372853315" />
+</android.support.constraint.ConstraintLayout>

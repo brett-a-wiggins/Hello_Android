@@ -58,4 +58,7 @@
     <string name="add_motorcycle">Add Motorcycle</string>
     <string name="add_new_car">Add new Car</string>
     <string name="select_user">Select User</string>
+    <string name="service_log_menu">Service log Menu</string>
+    <string name="fuel_log_menu">Fuel log Menu</string>
+    <string name="select_vehicle">Select Vehicle</string>
 </resources>
