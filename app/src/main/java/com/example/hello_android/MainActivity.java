@@ -18,20 +18,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_second);
+        setContentView(R.layout.activity_main);
 
         this.ownerList = new ArrayList();
 
-        newUserButton =  findViewById(R.id.new_user_button);
-        newUserButton.setOnClickListener(new View.OnClickListener() {
+        this.newUserButton = findViewById(R.id.new_user_button);
+        this.newUserButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,NewUserActivity.class);
                 startActivity(intent);
             }
         });
-        existingUserButton =  findViewById(R.id.add_new_vehicle_button);
-        existingUserButton.setOnClickListener(new View.OnClickListener() {
+        this.existingUserButton = findViewById(R.id.existing_user_button);
+        this.existingUserButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,ExistingUserActivity.class);

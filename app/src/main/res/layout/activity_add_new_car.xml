@@ -12,6 +12,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="68dp"
         android:layout_marginBottom="16dp"
+        android:contentDescription="@string/project_logo"
         app:layout_constraintBottom_toTopOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,13 +26,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:ems="10"
-        android:hint="Enter registration"
+        android:hint="@string/enter_registration"
         android:inputType="textPersonName"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/addCarButton2"
@@ -40,7 +42,7 @@
         android:layout_marginTop="196dp"
         android:backgroundTint="#61B1F4"
         android:fontFamily="@font/coda"
-        android:text="Add Car"
+        android:text="@string/add_car"
         android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -53,17 +55,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Enter odometer"
+        android:hint="@string/enter_odometer"
         android:inputType="number"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrationInput" />
+        app:layout_constraintTop_toBottomOf="@+id/registrationInput"
+        android:autofillHints="" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="412dp"
         android:layout_height="282dp"
+        android:contentDescription="@string/roadimagebackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/kisspng_road_royalty_free_illustration_landmarks_road_vector_5a86178550f0d3_7634598815187372853315" />

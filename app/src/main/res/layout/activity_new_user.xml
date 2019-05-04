@@ -13,12 +13,13 @@
         android:layout_marginTop="70dp"
         android:backgroundTint="#61B1F4"
         android:ems="10"
-        android:hint="Enter user name"
+        android:hint="@string/enter_user_name"
         android:inputType="textPersonName"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/add_user_button"
@@ -29,7 +30,7 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="#61B1F4"
         android:fontFamily="@font/coda"
-        android:text="Add User"
+        android:text="@string/add_user"
         app:layout_constraintBottom_toTopOf="@+id/imageView8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +40,7 @@
         android:id="@+id/imageView8"
         android:layout_width="413dp"
         android:layout_height="297dp"
-        android:contentDescription="@string/todo"
+        android:contentDescription="@string/roadimagebackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +51,7 @@
         android:layout_width="265dp"
         android:layout_height="66dp"
         android:layout_marginTop="50dp"
-        android:contentDescription="@string/todo"
+        android:contentDescription="@string/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
