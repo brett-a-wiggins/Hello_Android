@@ -37,6 +37,10 @@ public class ExistingUserActivity extends AppCompatActivity implements Parcelabl
         }
     };
 
+    public ExistingUserActivity(){
+        
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
