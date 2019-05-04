@@ -19,12 +19,11 @@
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="222dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="415dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="52dp"
         android:contentDescription="@string/project_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
@@ -33,7 +32,7 @@
         android:id="@+id/existing_user_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="252dp"
         android:backgroundTint="#04FDA6"
         android:text="@string/existing_user"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,10 +43,11 @@
         android:id="@+id/new_user_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="48dp"
         android:backgroundTint="#06FDA7"
         android:text="@string/new_user"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/existing_user_button" />
 </android.support.constraint.ConstraintLayout>

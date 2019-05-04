@@ -12,7 +12,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
    private Button newUserButton;
    private Button existingUserButton;
-   protected static ArrayList ownerList;
+   protected static ArrayList<VehicleOwner> ownerList = new ArrayList<VehicleOwner>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.ownerList = new ArrayList<VehicleOwner>();
+        //this.ownerList = new ArrayList<VehicleOwner>();
 
         this.newUserButton = findViewById(R.id.new_user_button);
         this.newUserButton.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,ExistingUserActivity.class);
-                intent.putStringArrayListExtra("ownerList",ownerList);
                 startActivity(intent);
             }
         });

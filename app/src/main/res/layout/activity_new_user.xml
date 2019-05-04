@@ -26,15 +26,15 @@
         style="@android:style/Widget.Button.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="56dp"
         android:backgroundTint="#61B1F4"
         android:fontFamily="@font/coda"
         android:text="@string/add_user"
-        app:layout_constraintBottom_toTopOf="@+id/imageView8"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/owner_name_text" tools:targetApi="lollipop" />
+        app:layout_constraintTop_toBottomOf="@+id/owner_name_text"
+        tools:targetApi="lollipop" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -48,8 +48,8 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="265dp"
-        android:layout_height="66dp"
+        android:layout_width="322dp"
+        android:layout_height="160dp"
         android:layout_marginTop="50dp"
         android:contentDescription="@string/logo"
         app:layout_constraintEnd_toEndOf="parent"

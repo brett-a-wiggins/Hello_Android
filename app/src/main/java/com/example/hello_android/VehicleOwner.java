@@ -14,7 +14,7 @@ public class VehicleOwner implements Parcelable {
     private String ownerAddress;
     private String ownerPhone;
     private String ownerEmail;
-    protected ArrayList<Vehicle> vehicleList;
+    protected ArrayList<Vehicle> vehicleList = new ArrayList<>();
 
     public VehicleOwner(String newName,String newAddress, String newPhone,
                             String newEmail){
@@ -22,7 +22,6 @@ public class VehicleOwner implements Parcelable {
         ownerAddress = newAddress;
         ownerPhone = newPhone;
         ownerEmail = newEmail;
-        vehicleList = new ArrayList<>();
     }
 
     public VehicleOwner(String newName) {

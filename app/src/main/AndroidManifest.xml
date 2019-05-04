@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".MainVehicleMenuActivity"></activity>
         <activity android:name=".SelectVehicleActivity"></activity>
         <activity android:name=".ExistingUserActivity"></activity>
         <activity android:name=".NewUserActivity"></activity>
@@ -17,7 +18,7 @@
         <activity android:name=".OdometerActivity" />
         <activity android:name=".ServiceActivity" />
         <activity android:name=".FillUPActivity" />
-        <activity android:name=".MenuActivity" />
+        <activity android:name=".VehicleMenuActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

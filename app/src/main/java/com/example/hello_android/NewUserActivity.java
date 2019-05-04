@@ -5,13 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-
-import java.util.ArrayList;
+import android.widget.EditText;
 
 public class NewUserActivity extends AppCompatActivity {
     private Button addUserButton;
-    private TextView userNameText;
+    private EditText userNameText;
 
 
 
@@ -22,7 +20,7 @@ public class NewUserActivity extends AppCompatActivity {
 
 
         userNameText = findViewById(R.id.owner_name_text);
-        String userName = userNameText.getText().toString();
+
 
         addUserButton = findViewById(R.id.add_user_button);
         addUserButton.setOnClickListener(new View.OnClickListener() {
@@ -30,8 +28,8 @@ public class NewUserActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                String userName = userNameText.getText().toString();
-                MainActivity.addOwner(userName);
+                String userName =  userNameText.getText().toString();
+                MainActivity.ownerList.add(new VehicleOwner(userNameText.getText().toString()));
                 Intent intent = new Intent(NewUserActivity.this,MainActivity.class);
                 startActivity(intent);
             }

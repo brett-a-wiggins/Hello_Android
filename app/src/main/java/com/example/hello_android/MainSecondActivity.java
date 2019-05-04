@@ -6,9 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
 public class MainSecondActivity extends AppCompatActivity {
     private Button mSavedVehicleButton;
     private Button mNewVehicleButton;
@@ -24,7 +21,7 @@ public class MainSecondActivity extends AppCompatActivity {
         mSavedVehicleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainSecondActivity.this,MenuActivity.class);
+                Intent intent = new Intent(MainSecondActivity.this, VehicleMenuActivity.class);
                 startActivity(intent);
             }
         });

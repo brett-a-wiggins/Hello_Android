@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="222dp"
-        android:layout_height="89dp"
+        android:layout_width="316dp"
+        android:layout_height="145dp"
         android:layout_marginTop="50dp"
         android:contentDescription="@string/project_logo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,8 +51,8 @@
 
     <ImageView
         android:id="@+id/imageView14"
-        android:layout_width="407dp"
-        android:layout_height="335dp"
+        android:layout_width="423dp"
+        android:layout_height="263dp"
         android:contentDescription="@string/roadimagebackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

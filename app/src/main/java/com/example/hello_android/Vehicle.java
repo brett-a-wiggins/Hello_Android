@@ -1,11 +1,14 @@
 package com.example.hello_android;
 
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 
-abstract class Vehicle {
+public class Vehicle implements Parcelable {
     private String registration;
     //private Date serviceDate; Shouldnt this be in service transaction inherited from transaction?
     protected int odometer;
@@ -22,6 +25,30 @@ abstract class Vehicle {
     public Vehicle() {
 
     }
+
+    private Vehicle(Parcel in) {
+        this.registration = in.readString();
+        this.odometer = in.readInt();
+    }
+
+    public void writeToParcel(Parcel out, int flags) {
+        out.writeString(registration);
+        out.writeInt(odometer);
+    }
+
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Parcelable.Creator<Vehicle> CREATOR = new Parcelable.Creator<Vehicle>() {
+        public Vehicle createFromParcel(Parcel in) {
+            return new Vehicle(in);
+        }
+
+        public Vehicle[] newArray(int size) {
+            return new Vehicle[size];
+        }
+    };
 
     private String addFuelTransaction(Date transactionDate, BigDecimal costPerLitre, BigDecimal totalCost, double litresPumped){
         fuelTransList.add(new FuelTransaction(transactionDate, totalCost, costPerLitre, litresPumped));
