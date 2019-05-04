@@ -18,10 +18,10 @@ public class SelectVehicleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_vehicle);
 
         vehicleSelectSpinner = this.findViewById(R.id.vehicle_select_spinner);
-        ArrayAdapter userListAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, tempOwner.getVehicleList());
-        userListAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        ArrayAdapter userListAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, tempOwner.getVehicleList());
+//        userListAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        vehicleSelectSpinner.setAdapter(userListAdapter);
+//        vehicleSelectSpinner.setAdapter(userListAdapter);
 
 
 
