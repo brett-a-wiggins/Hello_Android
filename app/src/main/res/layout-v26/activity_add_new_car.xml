@@ -6,49 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/registrationInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:ems="10"
-        android:hint="@string/enter_registration"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        android:autofillHints="" tools:targetApi="o" />
-
-    <Button
-        android:id="@+id/addCarButton2"
-        android:layout_width="208dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="196dp"
-        android:backgroundTint="#61B1F4"
-        android:fontFamily="@font/coda"
-        android:text="@string/add_car"
-        android:typeface="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/odometerInput" tools:targetApi="lollipop" />
-
-    <EditText
-        android:id="@+id/odometerInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/enter_odometer"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrationInput"
-        android:autofillHints="" tools:targetApi="o" />
-
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="269dp"
@@ -62,6 +19,49 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/registrationInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:ems="10"
+        android:hint="@string/enter_registration"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/addCarButton2"
+        android:layout_width="208dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="196dp"
+        android:backgroundTint="#61B1F4"
+        android:fontFamily="@font/coda"
+        android:text="@string/add_car"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/odometerInput" />
+
+    <EditText
+        android:id="@+id/odometerInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/enter_odometer"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrationInput"
+        android:autofillHints="" />
 
     <ImageView
         android:id="@+id/imageView6"

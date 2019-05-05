@@ -14,14 +14,18 @@ public class AddNewCar extends AppCompatActivity {
     private Button addCarButton2;
     private TextView registrationInput;
     private TextView odometerInput;
-    private ArrayList<Vehicle> vehicleList;
+    private VehicleOwner tempOwner;
+    private ArrayList<Vehicle> vehicleList = new ArrayList<Vehicle>();
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_car);
-        //this.vehicleList = VehicleOwner.getVehicleList();
+        Bundle vehicleMenuActivityBundle = this.getIntent().getExtras();
+        this.tempOwner = (VehicleOwner) vehicleMenuActivityBundle.getParcelable("tempOwner");
+        this.vehicleList = this.tempOwner.getVehicleList();
 
         registrationInput = findViewById(R.id.registrationInput);
         odometerInput = findViewById(R.id.odometerInput);

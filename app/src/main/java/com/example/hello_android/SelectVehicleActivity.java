@@ -22,7 +22,6 @@ public class SelectVehicleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_vehicle);
         Bundle vehicleMenuActivityBundle = this.getIntent().getExtras();
-        //this.vehicleList = (ArrayList<Vehicle>) vehicleMenuActivityBundle.getParcelable("vehicleList");
         this.tempOwner = (VehicleOwner) vehicleMenuActivityBundle.getParcelable("tempOwner");
         this.vehicleList = this.tempOwner.getVehicleList();
         vehicleList.add(new Car("444-666-J", 170000));

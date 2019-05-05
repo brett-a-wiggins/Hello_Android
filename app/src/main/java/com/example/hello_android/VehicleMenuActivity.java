@@ -23,9 +23,12 @@ public class VehicleMenuActivity extends AppCompatActivity {
 
 
         Bundle existingUserBundle = this.getIntent().getExtras();
-        this.vehicleList = (ArrayList<Vehicle>) existingUserBundle.getParcelable("vehicleList");
+            this.tempOwner = (VehicleOwner) existingUserBundle.getParcelable("tempOwner");
+            this.vehicleList = tempOwner.getVehicleList();
 
-        this.tempOwner = (VehicleOwner) existingUserBundle.getParcelable("tempOwner");
+//        this.vehicleList = (ArrayList<Vehicle>) existingUserBundle.getParcelable("vehicleList");
+
+//        this.tempOwner = (VehicleOwner) existingUserBundle.getParcelable("tempOwner");
 
         selectVehicleButton = findViewById(R.id.select_vehicle_button);
         selectVehicleButton.setOnClickListener(new View.OnClickListener() {
