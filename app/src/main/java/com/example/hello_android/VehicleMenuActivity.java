@@ -1,6 +1,7 @@
 package com.example.hello_android;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,8 @@ import java.util.ArrayList;
 public class VehicleMenuActivity extends AppCompatActivity {
     private Button selectVehicleButton;
     private Button addNewVehicleMenuButton;
+    private VehicleOwner tempOwner;
+    private ArrayList<Vehicle> vehicleList = new ArrayList<Vehicle>();
 
 
     @Override
@@ -18,7 +21,11 @@ public class VehicleMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_menu);
 
-        Bundle vehicleListBundle = this.getIntent().getExtras();
+
+        Bundle existingUserBundle = this.getIntent().getExtras();
+        this.vehicleList = (ArrayList<Vehicle>) existingUserBundle.getParcelable("vehicleList");
+
+        this.tempOwner = (VehicleOwner) existingUserBundle.getParcelable("tempOwner");
 
         selectVehicleButton = findViewById(R.id.select_vehicle_button);
         selectVehicleButton.setOnClickListener(new View.OnClickListener() {
@@ -27,6 +34,8 @@ public class VehicleMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(VehicleMenuActivity.this,SelectVehicleActivity.class);
+                intent.putParcelableArrayListExtra("vehicleList", tempOwner.getVehicleList());
+                intent.putExtra("tempOwner", tempOwner);
                 startActivity(intent);
             }
         });
@@ -38,6 +47,8 @@ public class VehicleMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(VehicleMenuActivity.this,AddNewVehicle.class);
+                intent.putParcelableArrayListExtra("vehicleList", tempOwner.getVehicleList());
+                intent.putExtra("tempOwner", tempOwner);
                 startActivity(intent);
             }
         });

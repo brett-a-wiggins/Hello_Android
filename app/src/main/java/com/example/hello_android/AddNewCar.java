@@ -14,7 +14,7 @@ public class AddNewCar extends AppCompatActivity {
     private Button addCarButton2;
     private TextView registrationInput;
     private TextView odometerInput;
-    private ArrayList vehicleList;
+    private ArrayList<Vehicle> vehicleList;
 
 
     @Override

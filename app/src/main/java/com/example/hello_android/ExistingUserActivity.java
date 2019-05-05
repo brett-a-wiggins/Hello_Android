@@ -15,6 +15,7 @@ public class ExistingUserActivity extends AppCompatActivity implements Parcelabl
     private VehicleOwner tempOwner;
     private Spinner userSpinner;
 
+
     private ExistingUserActivity(Parcel in) {
         this.tempOwner = new VehicleOwner(in.readString());
     }
@@ -38,7 +39,7 @@ public class ExistingUserActivity extends AppCompatActivity implements Parcelabl
     };
 
     public ExistingUserActivity(){
-        
+
     }
 
     @Override
@@ -65,8 +66,8 @@ public class ExistingUserActivity extends AppCompatActivity implements Parcelabl
             public void onClick(View v) {
                 setOwner(getVehicleOwner(userSpinner.getSelectedItem().toString()));
                 Intent intent = new Intent(ExistingUserActivity.this, VehicleMenuActivity.class);
-                intent.putParcelableArrayListExtra("vehicleList", tempOwner.vehicleList);
-                //intent.putParcelableArrayListExtra("tempOwner", this.tempOwner );
+                intent.putParcelableArrayListExtra("vehicleList", tempOwner.getVehicleList());
+                intent.putExtra("tempOwner", tempOwner );
                 startActivity(intent);
             }
         });

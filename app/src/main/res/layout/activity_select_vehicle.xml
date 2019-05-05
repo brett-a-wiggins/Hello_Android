@@ -23,6 +23,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/choose_vehicle_button"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Toggle"
+        android:layout_width="192dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#79BDF5"
+        android:text="@string/choose_vehicle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vehicle_select_spinner" />
+
     <ImageView
         android:id="@+id/imageView15"
         android:layout_width="wrap_content"
@@ -47,18 +61,4 @@
         app:layout_constraintHorizontal_bias="0.642"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/kisspng_road_royalty_free_illustration_landmarks_road_vector_5a86178550f0d3_7634598815187372853315" />
-
-    <Button
-        android:id="@+id/choose_vehicle_button"
-        style="@android:style/Widget.DeviceDefault.Light.Button.Toggle"
-        android:layout_width="192dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="#79BDF5"
-        android:text="@string/choose_vehicle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vehicle_select_spinner" />
 </android.support.constraint.ConstraintLayout>
