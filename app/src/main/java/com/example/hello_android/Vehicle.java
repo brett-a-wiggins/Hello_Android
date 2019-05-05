@@ -50,6 +50,15 @@ public class Vehicle implements Parcelable {
         }
     };
 
+    public String getRegistration(){
+        return this.registration;
+    }
+
+    @Override
+    public String toString() {
+        return this.registration;
+    }
+
     private String addFuelTransaction(Date transactionDate, BigDecimal costPerLitre, BigDecimal totalCost, double litresPumped){
         fuelTransList.add(new FuelTransaction(transactionDate, totalCost, costPerLitre, litresPumped));
         return "Fuel Transaction added";
