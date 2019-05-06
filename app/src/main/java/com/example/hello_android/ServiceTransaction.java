@@ -7,15 +7,11 @@ public class ServiceTransaction extends Transaction {
 
    private BigDecimal laborCost;
    private BigDecimal partCost;
-   private Date nextServiceDate;
-   private int nextServiceOdo;
 
-   public ServiceTransaction(Date transactionDate, String location, BigDecimal totalCost, BigDecimal laborCost, BigDecimal partCost, Date nextServiceDate, int nextServiceOdo) {
-       super(transactionDate, location, totalCost);
+   public ServiceTransaction(Date transactionDate, BigDecimal totalCost, BigDecimal laborCost, BigDecimal partCost) {
+       super(transactionDate, totalCost);
        this.laborCost = laborCost;
        this.partCost = partCost;
-       this.nextServiceDate = nextServiceDate;
-       this.nextServiceOdo = nextServiceOdo;
    }
 
 }
