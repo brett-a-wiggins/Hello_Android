@@ -10,6 +10,7 @@ import java.util.Date;
 
 public class Vehicle implements Parcelable {
     private String registration;
+
     //private Date serviceDate; Shouldnt this be in service transaction inherited from transaction?
     protected int odometer;
     private ArrayList<FuelTransaction> fuelTransList;
@@ -76,4 +77,5 @@ public class Vehicle implements Parcelable {
     private ArrayList getServiceTransList() {
         return this.serviceTransList;
     }
+
 }
