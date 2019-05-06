@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class FuelTransaction extends Transaction {
+
     private BigDecimal pricePerLitre;
     private int litres;
 
@@ -11,6 +12,7 @@ public class FuelTransaction extends Transaction {
         super(transactionDate, location, totalCost);
         this.pricePerLitre = pricePerLitre;
         this.litres = litres;
+
 
     }
 

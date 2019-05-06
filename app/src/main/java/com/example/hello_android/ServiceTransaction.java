@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class ServiceTransaction extends Transaction {
+
    private BigDecimal laborCost;
    private BigDecimal partCost;
    private Date nextServiceDate;
@@ -16,4 +17,5 @@ public class ServiceTransaction extends Transaction {
        this.nextServiceDate = nextServiceDate;
        this.nextServiceOdo = nextServiceOdo;
    }
+
 }
