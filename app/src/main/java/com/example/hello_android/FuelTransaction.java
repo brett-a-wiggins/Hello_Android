@@ -8,8 +8,8 @@ class FuelTransaction extends Transaction {
     private BigDecimal pricePerLitre;
     private double litres;
 
-    public FuelTransaction(Date transactionDate, String location, BigDecimal totalCost, BigDecimal pricePerLitre, double litres){
-        super(transactionDate, location, totalCost);
+    public FuelTransaction(Date transactionDate, BigDecimal totalCost, BigDecimal pricePerLitre, double litres){
+        super(transactionDate, totalCost);
         this.pricePerLitre = pricePerLitre;
         this.litres = litres;
 

@@ -12,7 +12,7 @@ public class Vehicle implements Parcelable {
     private String registration;
 
     //private Date serviceDate; Shouldnt this be in service transaction inherited from transaction?
-    int odometer;
+    private int odometer;
     private ArrayList<FuelTransaction> fuelTransList;
     private ArrayList<ServiceTransaction> serviceTransList;
 
@@ -61,12 +61,12 @@ public class Vehicle implements Parcelable {
     }
 
     private String addFuelTransaction(Date transactionDate, String location, BigDecimal costPerLitre, BigDecimal totalCost, double litresPumped){
-        fuelTransList.add(new FuelTransaction(transactionDate, location,totalCost, costPerLitre, litresPumped));
+        fuelTransList.add(new FuelTransaction(transactionDate, totalCost, costPerLitre, litresPumped));
         return "Fuel Transaction added";
     }
 
-    private String addServiceTransaction(Date transactionDate,String location, BigDecimal partCost, BigDecimal laborCost, BigDecimal totalCost, Date nextService, int nextServiceOdometer){
-        serviceTransList.add(new ServiceTransaction(transactionDate, location ,partCost, laborCost, totalCost,nextService,nextServiceOdometer));
+    private String addServiceTransaction(Date transactionDate, BigDecimal partCost, BigDecimal laborCost, BigDecimal totalCost){
+        serviceTransList.add(new ServiceTransaction(transactionDate, partCost, laborCost, totalCost));
         return "Service Transaction added";
     }
 
