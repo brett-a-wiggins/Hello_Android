@@ -64,4 +64,6 @@
     <string name="choose_a_vehicle" />
     <string name="choose_vehicle">Choose Vehicle</string>
     <string name="testtextview">testTextView</string>
+    <string name="receipt_storage">Receipt Storage</string>
+    <string name="export_data">Export Data</string>
 </resources>
