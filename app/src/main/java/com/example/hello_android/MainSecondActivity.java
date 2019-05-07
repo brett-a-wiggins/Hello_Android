@@ -29,7 +29,7 @@ public class MainSecondActivity extends AppCompatActivity {
         mNewVehicleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainSecondActivity.this,AddNewVehicle.class);
+                Intent intent = new Intent(MainSecondActivity.this, AddNewVehicleActivity.class);
                 startActivity(intent);
             }
         });

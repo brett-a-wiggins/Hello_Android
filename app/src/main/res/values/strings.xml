@@ -66,4 +66,12 @@
     <string name="testtextview">testTextView</string>
     <string name="receipt_storage">Receipt Storage</string>
     <string name="export_data">Export Data</string>
+    <string name="view_fuel_statistics">View Fuel Statistics</string>
+    <string name="remove_fuel_purchase">Remove fuel purchase</string>
+    <string name="view_fuel_purchases">View Fuel purchases</string>
+    <string name="add_fuel_purchase">Add Fuel Purchase</string>
+    <string name="service_statistics">Service Statistics</string>
+    <string name="add_new_service">Add New Service</string>
+    <string name="view_services">View Services</string>
+    <string name="remove_service">Remove Service</string>
 </resources>

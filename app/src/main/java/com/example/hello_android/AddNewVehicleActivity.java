@@ -6,9 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.ArrayList;
-
-public class AddNewVehicle extends AppCompatActivity {
+public class AddNewVehicleActivity extends AppCompatActivity {
     private Button addNewCarButton;
 
     @Override
@@ -21,7 +19,7 @@ public class AddNewVehicle extends AppCompatActivity {
         addNewCarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddNewVehicle.this,AddNewCar.class);
+                Intent intent = new Intent(AddNewVehicleActivity.this, AddNewCarActivity.class);
                 startActivity(intent);
             }
         });

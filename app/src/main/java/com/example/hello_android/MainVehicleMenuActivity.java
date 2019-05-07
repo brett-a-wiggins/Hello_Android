@@ -61,7 +61,7 @@ public class MainVehicleMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainVehicleMenuActivity.this, MainVehicleMenuActivity.class);
+                Intent intent = new Intent(MainVehicleMenuActivity.this, ExportDataMenuActivity.class);
                 startActivity(intent);
             }
         });
