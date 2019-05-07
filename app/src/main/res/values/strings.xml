@@ -74,4 +74,6 @@
     <string name="add_new_service">Add New Service</string>
     <string name="view_services">View Services</string>
     <string name="remove_service">Remove Service</string>
+    <string name="capture_receipt">Capture Receipt</string>
+    <string name="view_receipts">View Receipts</string>
 </resources>
