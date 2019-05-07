@@ -13,22 +13,17 @@ import java.util.ArrayList;
 public class SelectVehicleActivity extends AppCompatActivity {
     private Button chooseVehicleButton;
     private Spinner vehicleSelectSpinner;
-    private VehicleOwner tempOwner;
-    private ArrayList<Vehicle> vehicleList = new ArrayList<Vehicle>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_vehicle);
-        Bundle vehicleMenuActivityBundle = this.getIntent().getExtras();
-        this.tempOwner = (VehicleOwner) vehicleMenuActivityBundle.getParcelable("tempOwner");
-        this.vehicleList = this.tempOwner.getVehicleList();
-        vehicleList.add(new Car("444-666-J", 170000));
+        ExistingUserActivity.getTempOwner().addNewCar("Test-Car", 170000);
 
 
         vehicleSelectSpinner = this.findViewById(R.id.vehicle_select_spinner);
-        ArrayAdapter vehicleListAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, this.vehicleList);
+        ArrayAdapter vehicleListAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, ExistingUserActivity.getTempOwner().getVehicleList());
         vehicleListAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         vehicleSelectSpinner.setAdapter(vehicleListAdapter);

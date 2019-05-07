@@ -8,10 +8,8 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Vehicle implements Parcelable {
+public class Vehicle {
     private String registration;
-
-    //private Date serviceDate; Shouldnt this be in service transaction inherited from transaction?
     private int odometer;
     private ArrayList<FuelTransaction> fuelTransList;
     private ArrayList<ServiceTransaction> serviceTransList;
@@ -23,38 +21,9 @@ public class Vehicle implements Parcelable {
         this.serviceTransList = new ArrayList<>();
     }
 
-    public Vehicle() {
-
-    }
-
-    private Vehicle(Parcel in) {
-        this.registration = in.readString();
-        this.odometer = in.readInt();
-    }
-
-    public void writeToParcel(Parcel out, int flags) {
-        out.writeString(registration);
-        out.writeInt(odometer);
-    }
-
-    public int describeContents() {
-        return 0;
-    }
-
-    public static final Parcelable.Creator<Vehicle> CREATOR = new Parcelable.Creator<Vehicle>() {
-        public Vehicle createFromParcel(Parcel in) {
-            return new Vehicle(in);
-        }
-
-        public Vehicle[] newArray(int size) {
-            return new Vehicle[size];
-        }
-    };
-
     public String getRegistration(){
         return this.registration;
     }
-
 
     public String toString() {
         return this.registration;

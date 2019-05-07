@@ -10,37 +10,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-public class ExistingUserActivity extends AppCompatActivity implements Parcelable {
+public class ExistingUserActivity extends AppCompatActivity {
     private Button selectUserButton;
-    private VehicleOwner tempOwner;
+    private static VehicleOwner tempOwner;
     private Spinner userSpinner;
 
-
-    private ExistingUserActivity(Parcel in) {
-        this.tempOwner = new VehicleOwner(in.readString());
-    }
-
-    public void writeToParcel(Parcel out, int flags) {
-        out.writeString(this.tempOwner.getOwnerName());
-    }
-
-    public int describeContents() {
-        return 0;
-    }
-
-    public static final Parcelable.Creator<ExistingUserActivity> CREATOR = new Parcelable.Creator<ExistingUserActivity>() {
-        public ExistingUserActivity createFromParcel(Parcel in) {
-            return new ExistingUserActivity(in);
-        }
-
-        public ExistingUserActivity[] newArray(int size) {
-            return new ExistingUserActivity[size];
-        }
-    };
-
-    public ExistingUserActivity(){
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,10 +26,7 @@ public class ExistingUserActivity extends AppCompatActivity implements Parcelabl
         MainActivity.addOwner("Test User");
 
 
-
-
         userSpinner.setAdapter(userListAdapter);
-
 
 
         selectUserButton = findViewById(R.id.select_user_button);
@@ -64,20 +35,22 @@ public class ExistingUserActivity extends AppCompatActivity implements Parcelabl
 
             @Override
             public void onClick(View v) {
-                setOwner(getVehicleOwner(userSpinner.getSelectedItem().toString()));
+                setOwner(retrieveVehicleOwner(userSpinner.getSelectedItem().toString()));
                 Intent intent = new Intent(ExistingUserActivity.this, VehicleMenuActivity.class);
-                intent.putParcelableArrayListExtra("vehicleList", tempOwner.getVehicleList());
-                intent.putExtra("tempOwner", tempOwner );
                 startActivity(intent);
             }
         });
+    }
+
+    public static VehicleOwner getTempOwner() {
+        return tempOwner;
     }
 
     public void setOwner(VehicleOwner owner) {
         this.tempOwner = owner;
     }
 
-    public VehicleOwner getVehicleOwner (String ownerName) {
+    public VehicleOwner retrieveVehicleOwner(String ownerName) {
         for (int i = 0; i < MainActivity.ownerList.size(); i++) {
             if (MainActivity.ownerList.get(i).getOwnerName().equals(ownerName)) {
                 return MainActivity.ownerList.get(i);
@@ -86,3 +59,4 @@ public class ExistingUserActivity extends AppCompatActivity implements Parcelabl
         return null;
     }
 }
+

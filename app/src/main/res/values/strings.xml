@@ -63,4 +63,5 @@
     <string name="select_vehicle">Select Vehicle</string>
     <string name="choose_a_vehicle" />
     <string name="choose_vehicle">Choose Vehicle</string>
+    <string name="testtextview">testTextView</string>
 </resources>
