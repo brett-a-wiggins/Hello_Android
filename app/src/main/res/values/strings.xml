@@ -124,4 +124,8 @@
     <string name="view_services">View Services</string>
     <string name="logohead">logohead</string>
     <string name="welcome_to_guzzle">Welcome to Guzzle</string>
+    <string name="enter_price_per_litre">Enter price per litre</string>
+    <string name="enter_litres_pumped">Enter litres pumped</string>
+    <string name="enter_location">Enter location</string>
+    <string name="enter_total_cost">Enter total cost</string>
 </resources>

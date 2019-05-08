@@ -29,22 +29,25 @@ public class Vehicle {
         return this.registration;
     }
 
-    private String addFuelTransaction(Date transactionDate, String location, BigDecimal costPerLitre, BigDecimal totalCost, double litresPumped){
-        fuelTransList.add(new FuelTransaction(transactionDate, totalCost, costPerLitre, litresPumped));
+    public String addFuelTransaction(String location, double totalCost, double pricePerLitre, double litres, int odometer){
+        getFuelTransList().add(new FuelTransaction(location, totalCost, pricePerLitre, litres, odometer));
+        this.odometer = this.odometer + odometer;
         return "Fuel Transaction added";
     }
 
-    private String addServiceTransaction(Date transactionDate, BigDecimal partCost, BigDecimal laborCost, BigDecimal totalCost){
-        serviceTransList.add(new ServiceTransaction(transactionDate, partCost, laborCost, totalCost));
+    public String addServiceTransaction(Date transactionDate, double partCost, double laborCost, double totalCost){
+        getServiceTransList().add(new ServiceTransaction(transactionDate, partCost, laborCost, totalCost));
         return "Service Transaction added";
     }
 
-    private ArrayList getFuelTransList(){
+    public ArrayList getFuelTransList(){
         return this.fuelTransList;
     }
 
     private ArrayList getServiceTransList() {
         return this.serviceTransList;
     }
+
+
 
 }

@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class SelectVehicleActivity extends AppCompatActivity {
     private Button chooseVehicleButton;
     private Spinner vehicleSelectSpinner;
+    private static Vehicle tempVehicle;
 
 
     @Override
@@ -37,10 +38,28 @@ public class SelectVehicleActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
+                setSelectedVehicle(retrieveVehicle(vehicleSelectSpinner.getSelectedItem().toString()));
                 Intent intent = new Intent(SelectVehicleActivity.this, MainVehicleMenuActivity.class);
+
                 startActivity(intent);
             }
         });
+    }
+
+    public static Vehicle getTempVehicle() {
+        return tempVehicle;
+    }
+
+    public void setSelectedVehicle(Vehicle tempVeh) {
+        this.tempVehicle = tempVeh;
+    }
+
+    public Vehicle retrieveVehicle(String vehRego) {
+        for (int i = 0; i < ExistingUserActivity.getTempOwner().getVehicleList().size(); i++) {
+            if (ExistingUserActivity.getTempOwner().getVehicleList().get(i).toString().equals(vehRego)) {
+                return (Vehicle)ExistingUserActivity.getTempOwner().getVehicleList().get(i);
+            }
+        }
+        return null;
     }
 }
