@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,61 +9,142 @@
         android:id="@+id/fuel_type_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="84dp" />
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/fuel_price_entry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/fuel_price_entry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginRight="99dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="134dp" />
+        android:text="@string/price_per_lt"
+        app:layout_constraintBottom_toTopOf="@+id/fuel_amount_entry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fuel_type_spinner" />
 
     <EditText
         android:id="@+id/fuel_amount_entry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginRight="99dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="229dp" />
+        android:text="@string/ltr_pumped"
+        app:layout_constraintBottom_toTopOf="@+id/fillup_date_entry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fuel_price_entry" />
 
     <EditText
         android:id="@+id/fillup_date_entry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginRight="99dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="date"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="315dp" />
+        android:text="@string/date"
+        app:layout_constraintBottom_toTopOf="@+id/fillup_location_entry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fuel_amount_entry" />
 
     <EditText
         android:id="@+id/fillup_location_entry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginRight="99dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
         android:text="@string/location"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="415dp" />
+        app:layout_constraintBottom_toTopOf="@+id/odometer_reading_entry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fillup_date_entry" />
 
     <EditText
         android:id="@+id/odometer_reading_entry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginRight="99dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="number"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="493dp" />
+        android:text="@string/odometer"
+        app:layout_constraintBottom_toTopOf="@+id/photo_capture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fillup_location_entry" />
 
     <Button
         android:id="@+id/photo_capture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="580dp" />
+        android:layout_marginStart="133dp"
+        android:layout_marginLeft="133dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginRight="133dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/capture_receipt"
+        app:layout_constraintBottom_toTopOf="@+id/fuel_log_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/odometer_reading_entry" />
+
+    <Button
+        android:id="@+id/fuel_log_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginLeft="162dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginRight="161dp"
+        android:layout_marginBottom="33dp"
+        android:text="@string/submit_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photo_capture" />
 
 </android.support.constraint.ConstraintLayout>

@@ -12,7 +12,7 @@
     <string name="add_truck">Add Truck</string>
     <string name="add_user">Add User</string>
 
-    <string name="app_name">Hello_Android</string>
+    <string name="app_name">Guzzle, by Hello Android</string>
 
     <string name="capture_receipt">Capture Receipt</string>
 
@@ -52,7 +52,7 @@
     <string name="hint_date">04/04/2019</string>
     <string name="hint_litres">20</string>
     <string name="hint_location">Melbourne</string>
-    <string name="hint_odometer">odometer</string>
+    <string name="hint_odometer">Odometer</string>
     <string name="hint_price">20.00</string>
 
     <string name="image">image</string>
@@ -74,6 +74,7 @@
 
     <string name="odometer">Enter Odometer Here</string>
     <string name="odometer_distance_travelled">Travelled</string>
+    <string name="odometer_notification_setting">Odometer Notification</string>
 
     <string name="options">Options</string>
 
