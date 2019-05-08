@@ -21,7 +21,7 @@ public class MainSecondActivity extends AppCompatActivity {
         mSavedVehicleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainSecondActivity.this, VehicleMenuActivity.class);
+                Intent intent = new Intent(MainSecondActivity.this, SelectVehicleMenuActivity.class);
                 startActivity(intent);
             }
         });

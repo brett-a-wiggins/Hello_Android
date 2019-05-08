@@ -29,8 +29,8 @@ public class NewUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String userName =  userNameText.getText().toString();
-                MainActivity.ownerList.add(new VehicleOwner(userNameText.getText().toString()));
-                Intent intent = new Intent(NewUserActivity.this,MainActivity.class);
+                MainIntentActivity.ownerList.add(new VehicleOwner(userNameText.getText().toString()));
+                Intent intent = new Intent(NewUserActivity.this, MainIntentActivity.class);
                 startActivity(intent);
             }
         });

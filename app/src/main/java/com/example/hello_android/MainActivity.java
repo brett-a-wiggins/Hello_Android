@@ -1,52 +1,24 @@
 package com.example.hello_android;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-   private Button newUserButton;
-   private Button existingUserButton;
-   protected static ArrayList<VehicleOwner> ownerList = new ArrayList<VehicleOwner>();
-
+    private static int SPLASH_TIME_OUT = 3000;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-
+    protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //this.ownerList = new ArrayList<VehicleOwner>();
-
-        this.newUserButton = findViewById(R.id.new_user_button);
-        this.newUserButton.setOnClickListener(new View.OnClickListener() {
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,NewUserActivity.class);
-                startActivity(intent);
+            public void run() {
+                Intent homeIntent = new Intent(MainActivity.this, MainIntentActivity.class);
+                startActivity(homeIntent);
+                finish();
             }
-        });
-        this.existingUserButton = findViewById(R.id.existing_user_button);
-        this.existingUserButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,ExistingUserActivity.class);
-                startActivity(intent);
-            }
-        });
+        },SPLASH_TIME_OUT);
     }
-
-    public static void addOwner(String ownerName) {
-        ownerList.add(new VehicleOwner(ownerName));
-    }
-
-    public ArrayList<VehicleOwner> getOwnerList(){
-        return this.ownerList;
-    }
-
 }

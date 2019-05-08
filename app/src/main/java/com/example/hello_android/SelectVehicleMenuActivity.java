@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class VehicleMenuActivity extends AppCompatActivity {
+public class SelectVehicleMenuActivity extends AppCompatActivity {
     private Button selectVehicleButton;
     private Button addNewVehicleMenuButton;
 
@@ -14,7 +14,7 @@ public class VehicleMenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vehicle_menu);
+        setContentView(R.layout.activity_select_vehicle_menu);
 
         selectVehicleButton = findViewById(R.id.select_vehicle_button);
         selectVehicleButton.setOnClickListener(new View.OnClickListener() {
@@ -22,7 +22,7 @@ public class VehicleMenuActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(VehicleMenuActivity.this,SelectVehicleActivity.class);
+                Intent intent = new Intent(SelectVehicleMenuActivity.this,SelectVehicleActivity.class);
                 startActivity(intent);
             }
         });
@@ -33,7 +33,7 @@ public class VehicleMenuActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(VehicleMenuActivity.this, AddNewVehicleActivity.class);
+                Intent intent = new Intent(SelectVehicleMenuActivity.this, AddNewVehicleActivity.class);
                 startActivity(intent);
             }
         });

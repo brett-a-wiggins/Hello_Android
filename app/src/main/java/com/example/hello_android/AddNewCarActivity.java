@@ -33,7 +33,7 @@ public class AddNewCarActivity extends AppCompatActivity {
                 String registration = registrationInput.getText().toString();
                 int odometer = Integer.valueOf(odometerInput.getText().toString());
                 ExistingUserActivity.getTempOwner().addNewCar(registration, odometer);
-                Intent intent = new Intent(AddNewCarActivity.this, VehicleMenuActivity.class);
+                Intent intent = new Intent(AddNewCarActivity.this, SelectVehicleMenuActivity.class);
                 startActivity(intent);
             }
         });

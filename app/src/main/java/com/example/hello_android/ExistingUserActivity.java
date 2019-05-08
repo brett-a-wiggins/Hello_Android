@@ -2,8 +2,6 @@ package com.example.hello_android;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -21,9 +19,9 @@ public class ExistingUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_existing_user);
         userSpinner = this.findViewById(R.id.user_spinner);
-        ArrayAdapter userListAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, MainActivity.ownerList);
+        ArrayAdapter userListAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, MainIntentActivity.ownerList);
         userListAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        MainActivity.addOwner("Test User");
+        MainIntentActivity.addOwner("Test User");
 
 
         userSpinner.setAdapter(userListAdapter);
@@ -36,7 +34,7 @@ public class ExistingUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 setOwner(retrieveVehicleOwner(userSpinner.getSelectedItem().toString()));
-                Intent intent = new Intent(ExistingUserActivity.this, VehicleMenuActivity.class);
+                Intent intent = new Intent(ExistingUserActivity.this, SelectVehicleMenuActivity.class);
                 startActivity(intent);
             }
         });
@@ -51,9 +49,9 @@ public class ExistingUserActivity extends AppCompatActivity {
     }
 
     public VehicleOwner retrieveVehicleOwner(String ownerName) {
-        for (int i = 0; i < MainActivity.ownerList.size(); i++) {
-            if (MainActivity.ownerList.get(i).getOwnerName().equals(ownerName)) {
-                return MainActivity.ownerList.get(i);
+        for (int i = 0; i < MainIntentActivity.ownerList.size(); i++) {
+            if (MainIntentActivity.ownerList.get(i).getOwnerName().equals(ownerName)) {
+                return MainIntentActivity.ownerList.get(i);
             }
         }
         return null;
