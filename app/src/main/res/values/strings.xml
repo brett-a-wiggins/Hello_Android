@@ -1,79 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="app_name">Hello_Android</string>
-    <string name="content_descr">App Logo</string>
-    <string name="heading_text">Welcome to Guzzle</string>
-    <string name="start_button">Add new Vehicle</string>
-    <string name="logo">App logo</string>
-    <string name="image">image</string>
-    <string name="saved_vehicle">Saved Vehicles</string>
-    <string name="fill_up">Fill Up Vehicle</string>
-    <string name="service_vehicle">Service Vehicle</string>
-    <string name="display_stats">Display Fuel Use Statistics</string>
-    <string name="options">Options</string>
-    <string name="odometer">Enter Odometer Here</string>
-    <string name="date">Enter Date Here</string>
-    <string name="price_per_lt">Enter Price Per Litre Here</string>
-    <string name="ltr_pumped">Enter Litres Pumped here</string>
-    <string name="location">Enter Location Here</string>
-    <string name="submit_button">Submit</string>
-    <string name="hint_odometer">odometer</string>
-    <string name="hint_date">04/04/2019</string>
-    <string name="hint_price">20.00</string>
-    <string name="hint_litres">20</string>
-    <string name="hint_location">Melbourne</string>
-    <string name="add_new_vehicle">ADD NEW VEHICLE</string>
-    <string name="notes">Enter Notes Here</string>
-    <string name="add_button">ADD</string>
-    <string name="rego_string">Registration</string>
-    <string name="enter_rego">Enter Registration Here</string>
-    <string name="label_rego">Registration</string>
-    <string name="label_odometer">Odometer</string>
-    <string name="label_service">Next Service</string>
-    <string name="label_fuel">Fuel Type</string>
-    <string name="title_activity_odometer">OdometerActivity</string>
-    <string name="previous_odometer_read">Previous Odometer Reading</string>
-    <string name="current_odometer_read">Current Odometer Reading</string>
-    <string name="odometer_distance_travelled">Travelled</string>
-    <string name="from_date">Previous Date Recorded</string>
-    <string name="to_date">Last Date Recorded</string>
-    <string name="enter_text">Enter text here.</string>
-    <string name="travel_log">Travel Log.</string>
-    <string name="project_logo">Project Logo</string>
-    <string name="dots">....</string>
-    <string name="hint">Enter Data Here.</string>
-    <string name="roadimagebackground">roadImageBackground</string>
-    <string name="enter_new_user_details">Enter new user details</string>
-    <string name="todo1">TODO</string>
-    <string name="todo">TODO</string>
-    <string name="add_user">Add User</string>
-    <string name="enter_user_name">Enter user name</string>
-    <string name="enter_odometer">Enter odometer</string>
-    <string name="add_car">Add Car</string>
-    <string name="enter_registration">Enter registration</string>
-    <string name="new_user">New User</string>
-    <string name="existing_user">Existing User</string>
-    <string name="add_bus">Add Bus</string>
-    <string name="add_truck">Add Truck</string>
     <string name="add_boat">Add Boat</string>
+    <string name="add_bus">Add Bus</string>
+    <string name="add_button">ADD</string>
+    <string name="add_car">Add Car</string>
+    <string name="add_fuel_purchase">Add Fuel Purchase</string>
     <string name="add_motorcycle">Add Motorcycle</string>
     <string name="add_new_car">Add new Car</string>
-    <string name="select_user">Select User</string>
-    <string name="service_log_menu">Service log Menu</string>
-    <string name="fuel_log_menu">Fuel log Menu</string>
-    <string name="select_vehicle">Select Vehicle</string>
-    <string name="choose_a_vehicle" />
-    <string name="choose_vehicle">Choose Vehicle</string>
-    <string name="testtextview">testTextView</string>
-    <string name="receipt_storage">Receipt Storage</string>
-    <string name="export_data">Export Data</string>
-    <string name="view_fuel_statistics">View Fuel Statistics</string>
-    <string name="remove_fuel_purchase">Remove fuel purchase</string>
-    <string name="view_fuel_purchases">View Fuel purchases</string>
-    <string name="add_fuel_purchase">Add Fuel Purchase</string>
-    <string name="service_statistics">Service Statistics</string>
     <string name="add_new_service">Add New Service</string>
-    <string name="view_services">View Services</string>
-    <string name="remove_service">Remove Service</string>
+    <string name="add_new_vehicle">ADD NEW VEHICLE</string>
+    <string name="add_truck">Add Truck</string>
+    <string name="add_user">Add User</string>
+
+    <string name="app_name">Hello_Android</string>
+
     <string name="capture_receipt">Capture Receipt</string>
+
+    <string name="choose_a_vehicle"/>
+    <string name="choose_vehicle">Choose Vehicle</string>
+
+    <string name="content_descr">App Logo</string>
+
+    <string name="current_odometer_read">Current Odometer Reading</string>
+
+    <string name="date">Enter Date Here</string>
+
+    <string name="display_stats">Display Fuel Use Statistics</string>
+
+    <string name="dots">....</string>
+
+    <string name="enter_new_user_details">Enter new user details</string>
+    <string name="enter_odometer">Enter odometer</string>
+    <string name="enter_registration">Enter registration</string>
+    <string name="enter_rego">Enter Registration Here</string>
+    <string name="enter_text">Enter text here.</string>
+    <string name="enter_user_name">Enter user name</string>
+
+    <string name="existing_user">Existing User</string>
+
+    <string name="export_data">Export Data</string>
+
+    <string name="fill_up">Fill Up Vehicle</string>
+
+    <string name="from_date">Previous Date Recorded</string>
+
+    <string name="fuel_log_menu">Fuel log Menu</string>
+
+    <string name="heading_text">Welcome to Guzzle</string>
+
+    <string name="hint">Enter Data Here.</string>
+    <string name="hint_date">04/04/2019</string>
+    <string name="hint_litres">20</string>
+    <string name="hint_location">Melbourne</string>
+    <string name="hint_odometer">odometer</string>
+    <string name="hint_price">20.00</string>
+
+    <string name="image">image</string>
+
+    <string name="label_fuel">Fuel Type</string>
+    <string name="label_odometer">Odometer</string>
+    <string name="label_rego">Registration</string>
+    <string name="label_service">Next Service</string>
+
+    <string name="location">Enter Location Here</string>
+
+    <string name="logo">App logo</string>
+
+    <string name="ltr_pumped">Enter Litres Pumped here</string>
+
+    <string name="new_user">New User</string>
+
+    <string name="notes">Enter Notes Here</string>
+
+    <string name="odometer">Enter Odometer Here</string>
+    <string name="odometer_distance_travelled">Travelled</string>
+
+    <string name="options">Options</string>
+
+    <string name="previous_odometer_read">Previous Odometer Reading</string>
+
+    <string name="price_per_lt">Enter Price Per Litre Here</string>
+
+    <string name="project_logo">Project Logo</string>
+
+    <string name="receipt_storage">Receipt Storage</string>
+
+    <string name="rego_string">Registration</string>
+
+    <string name="remove_fuel_purchase">Remove fuel purchase</string>
+    <string name="remove_service">Remove Service</string>
+
+    <string name="roadimagebackground">roadImageBackground</string>
+
+    <string name="saved_vehicle">Saved Vehicles</string>
+
+    <string name="select_user">Select User</string>
+    <string name="select_vehicle">Select Vehicle</string>
+
+    <string name="service_log_menu">Service log Menu</string>
+    <string name="service_statistics">Service Statistics</string>
+    <string name="service_vehicle">Service Vehicle</string>
+
+    <string name="start_button">Add new Vehicle</string>
+
+    <string name="submit_button">Submit</string>
+
+    <string name="testtextview">testTextView</string>
+
+    <string name="title_activity_odometer">OdometerActivity</string>
+
+    <string name="to_date">Last Date Recorded</string>
+
+    <string name="todo">TODO</string>
+
+    <string name="todo1">TODO</string>
+
+    <string name="travel_log">Travel Log.</string>
+
+    <string name="view_fuel_purchases">View Fuel purchases</string>
+    <string name="view_fuel_statistics">View Fuel Statistics</string>
     <string name="view_receipts">View Receipts</string>
+    <string name="view_services">View Services</string>
 </resources>
