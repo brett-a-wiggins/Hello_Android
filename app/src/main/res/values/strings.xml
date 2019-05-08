@@ -122,4 +122,6 @@
     <string name="view_fuel_statistics">View Fuel Statistics</string>
     <string name="view_receipts">View Receipts</string>
     <string name="view_services">View Services</string>
+    <string name="welcome_to_guzzle">Welcome to Guzzle</string>
+    <string name="logohead">logohead</string>
 </resources>
