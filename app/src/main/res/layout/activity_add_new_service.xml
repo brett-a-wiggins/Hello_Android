@@ -5,94 +5,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Spinner
-        android:id="@+id/service_type_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginRight="14dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
-        android:id="@+id/service_date_reminder"
+        android:id="@+id/transaction_date_textview"
+        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginLeft="99dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginRight="99dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
-        android:gravity="center"
+        android:hint="@string/enter_service_date"
         android:inputType="date"
-        android:text="@string/date"
-        app:layout_constraintBottom_toTopOf="@+id/service_odometer_reading"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/service_type_spinner"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView31"
+        android:importantForAutofill="no" tools:targetApi="o"/>
 
     <EditText
-        android:id="@+id/service_odometer_reading"
+        android:id="@+id/next_service_date_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginLeft="99dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginRight="99dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
-        android:gravity="center"
-        android:hint="@string/hint_odometer"
-        android:inputType="number"
-        android:text="@string/odometer"
-        app:layout_constraintBottom_toTopOf="@+id/service_odometer_trigger"
+        android:hint="@string/enter_next_service_date"
+        android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/service_date_reminder" />
+        app:layout_constraintTop_toBottomOf="@+id/transaction_date_textview"
+        android:importantForAutofill="no" tools:targetApi="o" />
 
     <EditText
-        android:id="@+id/service_odometer_trigger"
+        android:id="@+id/laborcost_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginLeft="99dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginRight="99dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
-        android:gravity="center"
-        android:inputType="number"
-        android:text="@string/odometer_notification_setting"
-        app:layout_constraintBottom_toTopOf="@+id/service_log_submit"
+        android:hint="@string/enter_labor_cost"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/service_odometer_reading" />
+        app:layout_constraintTop_toBottomOf="@+id/next_service_date_textview"
+        android:importantForAutofill="no" tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/partcost_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:ems="10"
+        android:hint="@string/enter_part_cost"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/laborcost_textview"
+        android:importantForAutofill="no" tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/next_service_odometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:ems="10"
+        android:hint="@string/next_service_odometer"
+        android:inputType="number"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/partcost_textview"
+        android:importantForAutofill="no" tools:targetApi="o" />
 
     <Button
-        android:id="@+id/service_log_submit"
+        android:id="@+id/submit_service_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginLeft="162dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginRight="162dp"
-        android:layout_marginBottom="356dp"
-        android:text="@string/submit_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="@string/submit_service"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/service_odometer_trigger" />
+        app:layout_constraintTop_toBottomOf="@+id/next_service_odometer" />
 
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="416dp"
+        android:layout_height="274dp"
+        android:contentDescription="@string/roadimagebackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/kisspng_road_royalty_free_illustration_landmarks_road_vector_5a86178550f0d3_7634598815187372853315" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="233dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/project_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
 </android.support.constraint.ConstraintLayout>

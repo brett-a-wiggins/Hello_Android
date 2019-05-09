@@ -35,8 +35,8 @@ public class Vehicle {
         return "Fuel Transaction added";
     }
 
-    public String addServiceTransaction(Date transactionDate, double partCost, double laborCost, double totalCost){
-        getServiceTransList().add(new ServiceTransaction(transactionDate, partCost, laborCost, totalCost));
+    public String addServiceTransaction(Date transactionDate, Date nextServiceDate, double partCost, double laborCost, int nextServiceOdo){
+        getServiceTransList().add(new ServiceTransaction(transactionDate, nextServiceDate, partCost, laborCost, nextServiceOdo));
         return "Service Transaction added";
     }
 

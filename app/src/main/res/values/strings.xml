@@ -128,8 +128,14 @@
     <string name="enter_litres_pumped">Enter litres pumped</string>
     <string name="enter_location">Enter location</string>
     <string name="enter_total_cost">Enter total cost</string>
-    <string name="fuel_transactions">Fuel Transactions</string>
     <string name="export_to_csv_button">Export to CSV.</string>
     <string name="export_to_file_label">Export Data to CSV File</string>
     <string name="content_description_csv">Export to CSV image</string>
+    <string name="fuel_transactions">Fuel Transactions</string>
+    <string name="submit_service">Submit Service</string>
+    <string name="next_service_odometer">Next service odometer</string>
+    <string name="enter_part_cost">Enter part cost</string>
+    <string name="enter_labor_cost">Enter labor cost</string>
+    <string name="enter_next_service_date">Enter next service date</string>
+    <string name="enter_service_date">Enter service date</string>
 </resources>
