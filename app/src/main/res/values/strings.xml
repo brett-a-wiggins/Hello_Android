@@ -128,4 +128,5 @@
     <string name="enter_litres_pumped">Enter litres pumped</string>
     <string name="enter_location">Enter location</string>
     <string name="enter_total_cost">Enter total cost</string>
+    <string name="fuel_transactions">Fuel Transactions</string>
 </resources>

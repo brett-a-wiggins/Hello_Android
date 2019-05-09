@@ -13,6 +13,7 @@ class FuelTransaction extends Transaction {
     private String location;
     private Date transactionDate;
     private String transaction;
+    private double fuelTotal;
 
     public FuelTransaction(String location, double totalCost, double pricePerLitre, double litres, int odometer){
         super(location, totalCost);
@@ -22,12 +23,13 @@ class FuelTransaction extends Transaction {
         this.totalCost = totalCost;
         this.odometer = odometer;
         this.transactionDate = Calendar.getInstance().getTime();
+        this.fuelTotal = this.pricePerLitre * this.litres;
 
 
     }
 
     public String getFuelTransactionString(){
-        this.transaction = "Location: " + this.location + ", Date: " + this.transactionDate + ", Price per litre: " + this.pricePerLitre + ", Litres: " + this.litres + ", Odometer: " + this.odometer;
+        this.transaction = "Location: " + this.location + ", Date: " + this.transactionDate + ", P.p.Litre: $" + this.pricePerLitre + ", Litres: " + this.litres + ", Odometer: " + this.odometer + ", Cost: $" + this.fuelTotal + ", Total Cost: $" + this.totalCost;
         return transaction;
     }
 

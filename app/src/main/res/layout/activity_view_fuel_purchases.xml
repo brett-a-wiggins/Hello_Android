@@ -8,14 +8,30 @@
 
     <ListView
         android:id="@+id/fuel_purchases_listview"
-        style="@android:style/Widget.Material.ExpandableListView"
+        style="@android:style/Widget.ExpandableListView"
         android:layout_width="349dp"
         android:layout_height="520dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
+        android:clipChildren="true"
+        android:dividerHeight="3dp"
+        android:scrollbarStyle="insideInset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:targetApi="lollipop" />
+
+    <TextView
+        android:id="@+id/FuelTransactionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/fuel_transactions"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:autoSizeMaxTextSize="50dp"
+        app:autoSizeMinTextSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/fuel_purchases_listview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
