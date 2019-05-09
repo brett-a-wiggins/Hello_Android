@@ -128,4 +128,7 @@
     <string name="enter_litres_pumped">Enter litres pumped</string>
     <string name="enter_location">Enter location</string>
     <string name="enter_total_cost">Enter total cost</string>
+    <string name="export_to_csv_button">Export to CSV.</string>
+    <string name="export_to_file_label">Export Data to CSV File</string>
+    <string name="content_description_csv">Export to CSV image</string>
 </resources>

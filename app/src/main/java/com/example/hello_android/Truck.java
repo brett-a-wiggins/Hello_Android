@@ -1,5 +1,5 @@
 package com.example.hello_android;
-
+//This can go
 public class Truck extends Vehicle {
 //    private String fuelType;    any of this really needed?
 //    private int numOfWheels;
