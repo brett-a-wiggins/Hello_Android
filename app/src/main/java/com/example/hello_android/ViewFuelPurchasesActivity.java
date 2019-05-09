@@ -4,30 +4,34 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class ViewFuelPurchasesActivity extends AppCompatActivity {
-    private RecyclerView fuelPurchaseRecycleList;
-    private RecyclerView.Adapter fuelListAdapter;
-    private RecyclerView.LayoutManager layoutManager;
+   private ListView fuelPurchaseListView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_fuel_purchases);
-        fuelPurchaseRecycleList = (RecyclerView) findViewById(R.id.fuel_purchases_recycler_view);
+        fuelPurchaseListView = findViewById(R.id.fuel_purchases_listview);
+        ArrayAdapter fuelPurchasesAdapter = new ArrayAdapter(this,  android.R.layout.simple_expandable_list_item_1, populateFuelPurchasesList());
+        fuelPurchasesAdapter.setDropDownViewResource(android.R.layout.simple_expandable_list_item_1);
 
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
-        fuelPurchaseRecycleList.setHasFixedSize(true);
+        fuelPurchaseListView.setAdapter(fuelPurchasesAdapter);
 
-        // use a linear layout manager
-        layoutManager = new LinearLayoutManager(this);
-        fuelPurchaseRecycleList.setLayoutManager(layoutManager);
+    }
 
-        // specify an adapter (see also next example)
-        fuelListAdapter = new FuelViewAdapter(SelectVehicleActivity.getTempVehicle().getFuelTransList());
-        fuelPurchaseRecycleList.setAdapter(fuelListAdapter);
+    public ArrayList<String> populateFuelPurchasesList() {
+        ArrayList<String> fuelPurchasesList = new ArrayList<>();
+        for (int i = 0; i < SelectVehicleActivity.getTempVehicle().getFuelTransList().size(); i++) {
+            ArrayList<FuelTransaction> tempFuelList = SelectVehicleActivity.getTempVehicle().getFuelTransList();
+            fuelPurchasesList.add(tempFuelList.get(i).getFuelTransactionString());
+        }
+        return fuelPurchasesList;
     }
     // ...
 }

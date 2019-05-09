@@ -6,16 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/fuel_purchases_recycler_view"
-        android:layout_width="351dp"
-        android:layout_height="671dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
+    <ListView
+        android:id="@+id/fuel_purchases_listview"
+        style="@android:style/Widget.Material.ExpandableListView"
+        android:layout_width="349dp"
+        android:layout_height="520dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop" />
 </android.support.constraint.ConstraintLayout>
