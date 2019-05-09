@@ -44,7 +44,7 @@ public class Vehicle {
         return this.fuelTransList;
     }
 
-    private ArrayList getServiceTransList() {
+    public ArrayList getServiceTransList() {
         return this.serviceTransList;
     }
 
