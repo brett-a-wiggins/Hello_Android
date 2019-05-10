@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hello_android">
-    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -14,32 +17,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewReceiptsActivity"></activity>
-        <activity android:name=".CaptureReceiptActivity"></activity>
-        <activity android:name=".RemoveServiceActivity"></activity>
-        <activity android:name=".ViewServicesActivity"></activity>
-        <activity android:name=".AddNewServiceActivity"></activity>
-        <activity android:name=".ViewFuelStatisticsActivity"></activity>
-        <activity android:name=".RemoveFuelPurchaseActivity"></activity>
-        <activity android:name=".ViewFuelPurchasesActivity"></activity>
-        <activity android:name=".AddFuelPurchaseActivity"></activity>
-        <activity android:name=".ServiceStatisticsMenuActivity"></activity>
-        <activity android:name=".ExportDataMenuActivity"></activity>
-        <activity android:name=".ServiceLogMenuActivity"></activity>
-        <activity android:name=".ReceiptStorageMenuActivity"></activity>
-        <activity android:name=".FuelStatisticsMenuActivity"></activity>
-        <activity android:name=".FuelLogMenuActivity"></activity>
-        <activity android:name=".MainVehicleMenuActivity"></activity>
-        <activity android:name=".SelectVehicleActivity"></activity>
-        <activity android:name=".ExistingUserActivity"></activity>
-        <activity android:name=".NewUserActivity"></activity>
-        <activity android:name=".AddNewCarActivity"></activity>
-        <activity android:name=".AddNewVehicleActivity"></activity>
+        <activity android:name=".DirectoryPicker" />
+        <activity android:name=".ViewReceiptsActivity" />
+        <activity android:name=".CaptureReceiptActivity" />
+        <activity android:name=".RemoveServiceActivity" />
+        <activity android:name=".ViewServicesActivity" />
+        <activity android:name=".AddNewServiceActivity" />
+        <activity android:name=".ViewFuelStatisticsActivity" />
+        <activity android:name=".RemoveFuelPurchaseActivity" />
+        <activity android:name=".ViewFuelPurchasesActivity" />
+        <activity android:name=".AddFuelPurchaseActivity" />
+        <activity android:name=".ServiceStatisticsMenuActivity" />
+        <activity android:name=".ExportDataMenuActivity" />
+        <activity android:name=".ServiceLogMenuActivity" />
+        <activity android:name=".ReceiptStorageMenuActivity" />
+        <activity android:name=".FuelStatisticsMenuActivity" />
+        <activity android:name=".FuelLogMenuActivity" />
+        <activity android:name=".MainVehicleMenuActivity" />
+        <activity android:name=".SelectVehicleActivity" />
+        <activity android:name=".ExistingUserActivity" />
+        <activity android:name=".NewUserActivity" />
+        <activity android:name=".AddNewCarActivity" />
+        <activity android:name=".AddNewVehicleActivity" />
         <activity android:name=".OdometerActivity" />
         <activity android:name=".ServiceActivity" />
         <activity android:name=".FillUPActivity" />
         <activity android:name=".SelectVehicleMenuActivity" />
-        <activity android:name=".MainIntentActivity"></activity>
+        <activity android:name=".MainIntentActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,6 +51,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.example.android.fileprovider"
@@ -54,9 +59,8 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"></meta-data>
+                android:resource="@xml/file_paths" />
         </provider>
-
 
         <meta-data
             android:name="preloaded_fonts"

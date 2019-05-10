@@ -16,7 +16,7 @@
 
     <string name="capture_receipt">Capture Receipt</string>
 
-    <string name="choose_a_vehicle"/>
+    <string name="choose_a_vehicle" />
     <string name="choose_vehicle">Choose Vehicle</string>
 
     <string name="content_descr">App Logo</string>

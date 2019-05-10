@@ -1,7 +1,10 @@
 package com.example.hello_android;
 
+
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +24,7 @@ public class ExportDataMenuActivity extends AppCompatActivity {
     private Vehicle current_vehicle;
     private ArrayList<FuelTransaction> mFuelTransactions;
     private ArrayList<ServiceTransaction> mServiceTransactions;
+    private Context mContext;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -31,27 +35,22 @@ public class ExportDataMenuActivity extends AppCompatActivity {
         export_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               current_vehicle = SelectVehicleActivity.getTempVehicle();
-                File data_file = new File(getFilesDir(),"guzzle.csv");
-                try{
-                    if(data_file.createNewFile()){
-                        //create new file
-                        Context context = getApplicationContext();
-                        CharSequence text = "New CSV file created!";
-                        int duration = Toast.LENGTH_SHORT;
-
-                        Toast toast = Toast.makeText(context, text, duration);
-                        toast.show();
-                    }else{
-                        //file already exists
-                        Context context = getApplicationContext();
-                        CharSequence text = "CSV file exists. Appending data.";
-                        int duration = Toast.LENGTH_SHORT;
-
-                        Toast toast = Toast.makeText(context, text, duration);
-                        toast.show();
+               //current_vehicle = SelectVehicleActivity.getTempVehicle();
+                Intent intent = new Intent(ExportDataMenuActivity.this, DirectoryPicker.class);
+                startActivity(intent);
+               /* try{
+                    String rootPath = Environment.getExternalStorageDirectory()
+                            .getAbsolutePath() + "/GUZZLE/";
+                    File root = new File(rootPath);
+                    if (!root.exists()) {
+                        root.mkdirs();
                     }
-                    FileOutputStream fos = new FileOutputStream(data_file);
+                    File new_file = new File(rootPath + "guzzle.csv");
+                    if (new_file.exists()) {
+                        new_file.delete();
+                    }
+                    new_file.createNewFile();
+                    FileOutputStream fos = new FileOutputStream(new_file);
                     OutputStreamWriter osw = new OutputStreamWriter(fos);
                     BufferedWriter bw = new BufferedWriter(osw);
                     mFuelTransactions = current_vehicle.getFuelTransList();
@@ -73,14 +72,23 @@ public class ExportDataMenuActivity extends AppCompatActivity {
                         bw.write(String.valueOf(ft.getFuelTotal()));
                         bw.newLine();
                     }
+                    bw.flush();
+                    bw.close();
                 }catch(IOException e){
                     e.printStackTrace();
-                }
+                }*/
             }
         });
 
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == DirectoryPicker.PICK_DIRECTORY && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            String path = (String) extras.get(DirectoryPicker.CHOSEN_DIRECTORY);
 
+        }
+    }
 }
