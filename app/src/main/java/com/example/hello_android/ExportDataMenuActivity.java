@@ -37,7 +37,7 @@ public class ExportDataMenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                //current_vehicle = SelectVehicleActivity.getTempVehicle();
                 Intent intent = new Intent(ExportDataMenuActivity.this, DirectoryPicker.class);
-                startActivity(intent);
+                startActivityForResult(intent,DirectoryPicker.PICK_DIRECTORY);
                /* try{
                     String rootPath = Environment.getExternalStorageDirectory()
                             .getAbsolutePath() + "/GUZZLE/";
@@ -82,7 +82,6 @@ public class ExportDataMenuActivity extends AppCompatActivity {
 
 
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == DirectoryPicker.PICK_DIRECTORY && resultCode == RESULT_OK) {
@@ -91,4 +90,5 @@ public class ExportDataMenuActivity extends AppCompatActivity {
 
         }
     }
+
 }
