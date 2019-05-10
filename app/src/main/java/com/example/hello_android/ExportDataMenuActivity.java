@@ -22,7 +22,7 @@ public class ExportDataMenuActivity extends AppCompatActivity {
     private VehicleOwner current_owner;
     private Vehicle current_vehicle;
     private ArrayList<FuelTransaction> mFuelTransactions;
-
+    private ArrayList<ServiceTransaction> mServiceTransactions;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -58,8 +58,22 @@ public class ExportDataMenuActivity extends AppCompatActivity {
                     BufferedWriter bw = new BufferedWriter(osw);
                     mFuelTransactions = current_vehicle.getFuelTransList();
                     for(FuelTransaction ft:mFuelTransactions){
-                        //Should change this to use getters from FuelTransaction..
-                        bw.write(ft.getFuelTransactionString());
+                        bw.write(String.valueOf(ft.getPricePerLitre()));
+                        bw.write(",");
+                        bw.write(String.valueOf(ft.getLitres()));
+                        bw.write(",");
+                        bw.write(String.valueOf(ft.getOdometer()));
+                        bw.write(",");
+                        bw.write(String.valueOf(ft.getTotalCost()));
+                        bw.write(",");
+                        bw.write(ft.getLocation());
+                        bw.write(",");
+                        bw.write(String.valueOf(ft.getTransactionDate()));
+                        bw.write(",");
+                        bw.write(ft.getTransaction());
+                        bw.write(",");
+                        bw.write(String.valueOf(ft.getFuelTotal()));
+                        bw.newLine();
                     }
                 }catch(IOException e){
                     e.printStackTrace();
