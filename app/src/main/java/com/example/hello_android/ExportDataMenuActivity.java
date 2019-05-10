@@ -19,12 +19,10 @@ import java.util.ArrayList;
 
 public class ExportDataMenuActivity extends AppCompatActivity {
     private Button export_button;
-    private PrintWriter writer;
     private VehicleOwner current_owner;
     private Vehicle current_vehicle;
     private ArrayList<FuelTransaction> mFuelTransactions;
-    private StringBuilder sb = new StringBuilder();
-    private PrintWriter write;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -40,13 +38,29 @@ public class ExportDataMenuActivity extends AppCompatActivity {
                 try{
                     if(data_file.createNewFile()){
                         //create new file
+                        Context context = getApplicationContext();
+                        CharSequence text = "New CSV file created!";
+                        int duration = Toast.LENGTH_SHORT;
+
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
                     }else{
                         //file already exists
+                        Context context = getApplicationContext();
+                        CharSequence text = "CSV file exists. Appending data.";
+                        int duration = Toast.LENGTH_SHORT;
+
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
                     }
                     FileOutputStream fos = new FileOutputStream(data_file);
                     OutputStreamWriter osw = new OutputStreamWriter(fos);
                     BufferedWriter bw = new BufferedWriter(osw);
-                    bw.write(current_vehicle.toString());
+                    mFuelTransactions = current_vehicle.getFuelTransList();
+                    for(FuelTransaction ft:mFuelTransactions){
+                        //Should change this to use getters from FuelTransaction..
+                        bw.write(ft.getFuelTransactionString());
+                    }
                 }catch(IOException e){
                     e.printStackTrace();
                 }

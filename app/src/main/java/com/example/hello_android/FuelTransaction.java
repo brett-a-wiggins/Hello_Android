@@ -28,9 +28,74 @@ class FuelTransaction extends Transaction {
 
     }
 
+    public double getPricePerLitre() {
+        return pricePerLitre;
+    }
+
+    public void setPricePerLitre(double pricePerLitre) {
+        this.pricePerLitre = pricePerLitre;
+    }
+
+    public double getLitres() {
+        return litres;
+    }
+
+    public void setLitres(double litres) {
+        this.litres = litres;
+    }
+
+    public int getOdometer() {
+        return odometer;
+    }
+
+    public void setOdometer(int odometer) {
+        this.odometer = odometer;
+    }
+
+    public double getTotalCost() {
+        return totalCost;
+    }
+
+    public void setTotalCost(double totalCost) {
+        this.totalCost = totalCost;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public Date getTransactionDate() {
+        return transactionDate;
+    }
+
+    public void setTransactionDate(Date transactionDate) {
+        this.transactionDate = transactionDate;
+    }
+
+    public String getTransaction() {
+        return transaction;
+    }
+
+    public void setTransaction(String transaction) {
+        this.transaction = transaction;
+    }
+
+    public double getFuelTotal() {
+        return fuelTotal;
+    }
+
+    public void setFuelTotal(double fuelTotal) {
+        this.fuelTotal = fuelTotal;
+    }
+
     public String getFuelTransactionString(){
         this.transaction = "Location: " + this.location + ", Date: " + this.transactionDate + ", P.p.Litre: $" + this.pricePerLitre + ", Litres: " + this.litres + ", Odometer: " + this.odometer + ", Cost: $" + this.fuelTotal + ", Total Cost: $" + this.totalCost;
         return transaction;
     }
+
 
 }
