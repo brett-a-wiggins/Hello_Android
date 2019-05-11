@@ -34,7 +34,7 @@ public class ReceiptStorageMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(ReceiptStorageMenuActivity.this, CaptureReceiptActivity.class);
+                Intent intent = new Intent(ReceiptStorageMenuActivity.this, ViewReceiptsActivity.class);
                 startActivity(intent);
             }
         });

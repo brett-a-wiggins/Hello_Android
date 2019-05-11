@@ -141,4 +141,6 @@
     <string name="service_log">Service Log</string>
     <string name="camera_imageview">camera imageview</string>
     <string name="open_camera">Open Camera</string>
+    <string name="open_gallery">Open Gallery</string>
+    <string name="receiptimageview">receiptimageview</string>
 </resources>
