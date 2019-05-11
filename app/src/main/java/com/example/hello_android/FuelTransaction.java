@@ -76,13 +76,13 @@ class FuelTransaction extends Transaction {
         this.transactionDate = transactionDate;
     }
 
-    public String getTransaction() {
-        return transaction;
-    }
-
-    public void setTransaction(String transaction) {
-        this.transaction = transaction;
-    }
+//    public String getTransaction() {
+//        return transaction;
+//    }
+//
+//    public void setTransaction(String transaction) {
+//        this.transaction = transaction;
+//    }
 
     public double getFuelTotal() {
         return fuelTotal;

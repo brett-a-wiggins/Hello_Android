@@ -22,7 +22,7 @@ public class ExportDataMenuActivity extends AppCompatActivity {
     private Button export_button;
     private VehicleOwner current_owner;
     private Vehicle current_vehicle;
-    private ArrayList<FuelTransaction> mFuelTransactions;
+    private ArrayList<FuelTransaction> mFuelTransactions = new ArrayList<>();
     private ArrayList<ServiceTransaction> mServiceTransactions;
     private Context mContext;
     @Override
@@ -55,7 +55,7 @@ public class ExportDataMenuActivity extends AppCompatActivity {
                 if (!root.exists()) {
                     root.mkdirs();
                 }
-                File new_file = new File(root + "guzzle.csv");
+                File new_file = new File( root + "GUZZLEfueltransactions.txt");
                 if (new_file.exists()) {
                     new_file.delete();
                 }
@@ -63,7 +63,7 @@ public class ExportDataMenuActivity extends AppCompatActivity {
                 FileOutputStream fos = new FileOutputStream(new_file);
                 OutputStreamWriter osw = new OutputStreamWriter(fos);
                 BufferedWriter bw = new BufferedWriter(osw);
-                mFuelTransactions = current_vehicle.getFuelTransList();
+                mFuelTransactions = SelectVehicleActivity.getTempVehicle().getFuelTransList();
                 for(FuelTransaction ft:mFuelTransactions){
                     bw.write(String.valueOf(ft.getPricePerLitre()));
                     bw.write(",");
@@ -76,8 +76,6 @@ public class ExportDataMenuActivity extends AppCompatActivity {
                     bw.write(ft.getLocation());
                     bw.write(",");
                     bw.write(String.valueOf(ft.getTransactionDate()));
-                    bw.write(",");
-                    bw.write(ft.getTransaction());
                     bw.write(",");
                     bw.write(String.valueOf(ft.getFuelTotal()));
                     bw.newLine();

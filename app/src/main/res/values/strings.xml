@@ -139,4 +139,6 @@
     <string name="enter_next_service_date">Enter next service date</string>
     <string name="enter_service_date">Enter service date</string>
     <string name="service_log">Service Log</string>
+    <string name="camera_imageview">camera imageview</string>
+    <string name="open_camera">Open Camera</string>
 </resources>

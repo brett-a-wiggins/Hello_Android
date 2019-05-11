@@ -18,7 +18,7 @@
         android:layout_above="@+id/button_image"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="0dp"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/logohead"
         android:cropToPadding="false"
         android:padding="300dp" />
 
@@ -30,7 +30,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="96dp"
         android:onClick="takePicture"
-        android:text="Open Camera "
+        android:text="@string/open_camera"
         android:textSize="30sp" />
 
     <ImageView
@@ -47,36 +47,7 @@
         android:layout_marginTop="174dp"
         android:layout_marginEnd="101dp"
         android:layout_marginRight="101dp"
+        android:contentDescription="@string/camera_imageview"
         app:srcCompat="@drawable/logohead" />
 
 </RelativeLayout>
-
-<!--<android.support.constraint.ConstraintLayout-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent">-->
-
-    <!--<ImageView-->
-        <!--android:id="@+id/photo_imageview"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="176dp"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.497"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:srcCompat="@drawable/logohead" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/take_picture_button"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="136dp"-->
-        <!--android:text="Take Picture"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.498"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/photo_imageview" />-->
-<!--</android.support.constraint.ConstraintLayout>-->

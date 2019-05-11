@@ -19,10 +19,7 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
-public class CaptureReceiptActivity extends AppCompatActivity {
-
-
+class CaptureReceiptActivity extends AppCompatActivity{
     private Button takePictureButton;
     private ImageView photoImageView;
     private Uri file;
@@ -36,6 +33,14 @@ public class CaptureReceiptActivity extends AppCompatActivity {
         StrictMode.setVmPolicy(builder.build());
 
         takePictureButton = (Button) findViewById(R.id.button_image);
+        takePictureButton.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                takePicture(v);
+            }
+        });
         photoImageView = (ImageView) findViewById(R.id.photoImageview);
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
@@ -73,7 +78,7 @@ public class CaptureReceiptActivity extends AppCompatActivity {
 
     private static File getOutputMediaFile(){
         File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES), "CameraDemo");
+                Environment.DIRECTORY_PICTURES), "GuzzleReceipts");
 
         if (!mediaStorageDir.exists()){
             if (!mediaStorageDir.mkdirs()){
@@ -83,7 +88,7 @@ public class CaptureReceiptActivity extends AppCompatActivity {
 
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         return new File(mediaStorageDir.getPath() + File.separator +
-                "IMG_"+ timeStamp + ".jpg");
+                "GUZZLERECEIPT_"+ timeStamp + ".jpg");
     }
 
 }
