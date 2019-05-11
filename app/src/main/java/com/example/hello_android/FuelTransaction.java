@@ -69,7 +69,7 @@ class FuelTransaction extends Transaction {
     }
 
     public Date getTransactionDate() {
-        return transactionDate;
+        return this.transactionDate;
     }
 
     public void setTransactionDate(Date transactionDate) {

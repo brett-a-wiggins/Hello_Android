@@ -143,4 +143,6 @@
     <string name="open_camera">Open Camera</string>
     <string name="open_gallery">Open Gallery</string>
     <string name="receiptimageview">receiptimageview</string>
+    <string name="add_other_vehicle">Add other vehicle</string>
+    <string name="welcome_to_guzzle2">Welcome to Guzzle</string>
 </resources>

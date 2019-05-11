@@ -27,75 +27,10 @@
         tools:layout_conversion_absoluteWidth="411dp" />
 
     <Button
-        android:id="@+id/button2"
-        style="@android:style/Widget.DeviceDefault.Light.Button.Toggle"
-        android:layout_width="128dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#61B1F4"
-        android:backgroundTintMode="multiply"
-        android:fontFamily="@font/coda"
-        android:text="@string/add_bus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" tools:targetApi="lollipop" />
-
-    <Button
-        android:id="@+id/button8"
-        style="@android:style/Widget.DeviceDefault.Light.Button.Toggle"
-        android:layout_width="128dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#61B1F4"
-        android:backgroundTintMode="multiply"
-        android:fontFamily="@font/coda"
-        android:text="@string/add_truck"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" tools:targetApi="lollipop" />
-
-    <Button
-        android:id="@+id/button7"
-        style="@android:style/Widget.DeviceDefault.Light.Button.Toggle"
-        android:layout_width="141dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#61B1F4"
-        android:backgroundTintMode="multiply"
-        android:fontFamily="@font/coda"
-        android:text="@string/add_boat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" tools:targetApi="lollipop" />
-
-    <Button
-        android:id="@+id/button6"
-        style="@android:style/Widget.DeviceDefault.Light.Button.Toggle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#61B1F4"
-        android:backgroundTintMode="multiply"
-        android:fontFamily="@font/coda"
-        android:text="@string/add_motorcycle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addNewCarButton" tools:targetApi="lollipop" />
-
-    <Button
         android:id="@+id/addNewCarButton"
         style="@android:style/Widget.DeviceDefault.Light.Button.Toggle"
-        android:layout_width="138dp"
-        android:layout_height="42dp"
+        android:layout_width="211dp"
+        android:layout_height="74dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="16dp"
@@ -106,6 +41,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" tools:targetApi="lollipop" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/addNewCarButton2"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Toggle"
+        android:layout_width="211dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#61B1F4"
+        android:backgroundTintMode="multiply"
+        android:fontFamily="@font/coda"
+        android:text="@string/add_other_vehicle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addNewCarButton"
+        tools:targetApi="lollipop" />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:contentDescription="@string/roadimagebackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/kisspng_road_royalty_free_illustration_landmarks_road_vector_5a86178550f0d3_7634598815187372853315" />
 
 </android.support.constraint.ConstraintLayout>

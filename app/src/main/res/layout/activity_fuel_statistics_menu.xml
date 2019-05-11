@@ -6,48 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ListView
-        android:id="@+id/date_list_view"
-        android:layout_width="92dp"
-        android:layout_height="594dp"
+    <TableLayout
+        android:id="@+id/fuel_stat_table"
+        android:layout_width="395dp"
+        android:layout_height="715dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:textFilterEnabled="false"
-        app:layout_constraintEnd_toStartOf="@+id/_dynamic"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ListView
-        android:id="@+id/total_cost_list_view"
-        android:layout_width="86dp"
-        android:layout_height="595dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/_dynamic"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ListView
-        android:id="@+id/location_list_view"
-        android:layout_width="209dp"
-        android:layout_height="597dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/arrow_up_float"
-        tools:layout_editor_absoluteY="605dp" />
+        <TableRow
+            android:id="@+id/fuel_stat_row1"
+            android:layout_width="match_parent"
+            android:layout_height="41dp" />
+    </TableLayout>
 
 </android.support.constraint.ConstraintLayout>

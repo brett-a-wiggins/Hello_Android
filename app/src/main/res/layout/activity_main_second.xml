@@ -38,6 +38,7 @@
 
     <Button
         android:id="@+id/saved_vehicle_button"
+        style="@android:style/Widget.Material.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
@@ -46,7 +47,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_new_vehicle_button" tools:targetApi="lollipop"/>
+        app:layout_constraintTop_toBottomOf="@+id/add_new_vehicle_button"
+        tools:targetApi="lollipop" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -61,6 +63,7 @@
 
     <Button
         android:id="@+id/add_new_vehicle_button"
+        style="@android:style/Widget.Material.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#61B1F4"
@@ -68,6 +71,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" tools:targetApi="lollipop"/>
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop" />
 
 </android.support.constraint.ConstraintLayout>

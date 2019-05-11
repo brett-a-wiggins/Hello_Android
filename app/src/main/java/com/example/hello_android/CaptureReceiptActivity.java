@@ -19,7 +19,7 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-class CaptureReceiptActivity extends AppCompatActivity{
+public class CaptureReceiptActivity extends AppCompatActivity{
     private Button takePictureButton;
     private ImageView photoImageView;
     private Uri file;
@@ -78,7 +78,7 @@ class CaptureReceiptActivity extends AppCompatActivity{
 
     private static File getOutputMediaFile(){
         File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES), "GuzzleReceipts");
+                Environment.DIRECTORY_PICTURES), "Guzzle (" + ExistingUserActivity.getTempOwner() + ") Receipts");
 
         if (!mediaStorageDir.exists()){
             if (!mediaStorageDir.mkdirs()){

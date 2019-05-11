@@ -24,6 +24,7 @@
 
     <Button
         android:id="@+id/button_image"
+        style="@android:style/Widget.Material.Button.Inset"
         android:layout_width="303dp"
         android:layout_height="124dp"
         android:layout_alignParentBottom="true"
@@ -31,7 +32,7 @@
         android:layout_marginBottom="96dp"
         android:onClick="takePicture"
         android:text="@string/open_camera"
-        android:textSize="30sp" />
+        android:textSize="30sp" tools:targetApi="lollipop"/>
 
     <ImageView
         android:id="@+id/imageView32"

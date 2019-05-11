@@ -41,7 +41,6 @@
         <activity android:name=".AddNewVehicleActivity" />
         <activity android:name=".OdometerActivity" />
         <activity android:name=".ServiceActivity" />
-        <activity android:name=".FillUPActivity" />
         <activity android:name=".SelectVehicleMenuActivity" />
         <activity android:name=".MainIntentActivity" />
         <activity android:name=".MainActivity">
