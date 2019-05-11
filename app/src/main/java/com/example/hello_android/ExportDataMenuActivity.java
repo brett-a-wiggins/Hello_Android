@@ -38,45 +38,7 @@ public class ExportDataMenuActivity extends AppCompatActivity {
                //current_vehicle = SelectVehicleActivity.getTempVehicle();
                 Intent intent = new Intent(ExportDataMenuActivity.this, DirectoryPicker.class);
                 startActivityForResult(intent,DirectoryPicker.PICK_DIRECTORY);
-               /* try{
-                    String rootPath = Environment.getExternalStorageDirectory()
-                            .getAbsolutePath() + "/GUZZLE/";
-                    File root = new File(rootPath);
-                    if (!root.exists()) {
-                        root.mkdirs();
-                    }
-                    File new_file = new File(rootPath + "guzzle.csv");
-                    if (new_file.exists()) {
-                        new_file.delete();
-                    }
-                    new_file.createNewFile();
-                    FileOutputStream fos = new FileOutputStream(new_file);
-                    OutputStreamWriter osw = new OutputStreamWriter(fos);
-                    BufferedWriter bw = new BufferedWriter(osw);
-                    mFuelTransactions = current_vehicle.getFuelTransList();
-                    for(FuelTransaction ft:mFuelTransactions){
-                        bw.write(String.valueOf(ft.getPricePerLitre()));
-                        bw.write(",");
-                        bw.write(String.valueOf(ft.getLitres()));
-                        bw.write(",");
-                        bw.write(String.valueOf(ft.getOdometer()));
-                        bw.write(",");
-                        bw.write(String.valueOf(ft.getTotalCost()));
-                        bw.write(",");
-                        bw.write(ft.getLocation());
-                        bw.write(",");
-                        bw.write(String.valueOf(ft.getTransactionDate()));
-                        bw.write(",");
-                        bw.write(ft.getTransaction());
-                        bw.write(",");
-                        bw.write(String.valueOf(ft.getFuelTotal()));
-                        bw.newLine();
-                    }
-                    bw.flush();
-                    bw.close();
-                }catch(IOException e){
-                    e.printStackTrace();
-                }*/
+
             }
         });
 
@@ -87,7 +49,44 @@ public class ExportDataMenuActivity extends AppCompatActivity {
         if(requestCode == DirectoryPicker.PICK_DIRECTORY && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             String path = (String) extras.get(DirectoryPicker.CHOSEN_DIRECTORY);
+            try{
 
+                File root = new File(path);
+                if (!root.exists()) {
+                    root.mkdirs();
+                }
+                File new_file = new File(root + "guzzle.csv");
+                if (new_file.exists()) {
+                    new_file.delete();
+                }
+                new_file.createNewFile();
+                FileOutputStream fos = new FileOutputStream(new_file);
+                OutputStreamWriter osw = new OutputStreamWriter(fos);
+                BufferedWriter bw = new BufferedWriter(osw);
+                mFuelTransactions = current_vehicle.getFuelTransList();
+                for(FuelTransaction ft:mFuelTransactions){
+                    bw.write(String.valueOf(ft.getPricePerLitre()));
+                    bw.write(",");
+                    bw.write(String.valueOf(ft.getLitres()));
+                    bw.write(",");
+                    bw.write(String.valueOf(ft.getOdometer()));
+                    bw.write(",");
+                    bw.write(String.valueOf(ft.getTotalCost()));
+                    bw.write(",");
+                    bw.write(ft.getLocation());
+                    bw.write(",");
+                    bw.write(String.valueOf(ft.getTransactionDate()));
+                    bw.write(",");
+                    bw.write(ft.getTransaction());
+                    bw.write(",");
+                    bw.write(String.valueOf(ft.getFuelTotal()));
+                    bw.newLine();
+                }
+                bw.flush();
+                bw.close();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
         }
     }
 
