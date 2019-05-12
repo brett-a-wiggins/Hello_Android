@@ -145,4 +145,9 @@
     <string name="receiptimageview">receiptimageview</string>
     <string name="add_other_vehicle">Add other vehicle</string>
     <string name="welcome_to_guzzle2">Welcome to Guzzle</string>
+    <string name="date2">Date</string>
+    <string name="location2">Location</string>
+    <string name="p_litre2">$.p Litre</string>
+    <string name="litres2">Litres</string>
+    <string name="fuel_cost2">Fuel Cost</string>
 </resources>

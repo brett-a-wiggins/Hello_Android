@@ -17,6 +17,10 @@ public class FuelLogMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fuel_log_menu);
 
+        SelectVehicleActivity.getTempVehicle().getFuelTransList().add(new FuelTransaction("BP Petrol Station", 25.50, 5.50, 9, 187000));
+        SelectVehicleActivity.getTempVehicle().getFuelTransList().add(new FuelTransaction("Shell Petrol Station", 27.50, 7.50, 12, 243000));
+
+
         addFuelPurchaseButton = this.findViewById(R.id.add_fuel_purchase_button);
         addFuelPurchaseButton.setOnClickListener(new View.OnClickListener() {
 

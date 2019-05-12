@@ -8,7 +8,7 @@
 
     <Spinner
         android:id="@+id/vehicle_select_spinner"
-        style="@android:style/Widget.Spinner"
+        style="@android:style/Widget.Material.Spinner"
         android:layout_width="383dp"
         android:layout_height="74dp"
         android:layout_marginTop="16dp"
@@ -21,7 +21,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" tools:targetApi="lollipop"/>
 
     <Button
         android:id="@+id/choose_vehicle_button"
