@@ -12,6 +12,8 @@ public class AddNewCarActivity extends AppCompatActivity {
     private Button addCarButton2;
     private TextView registrationInput;
     private TextView odometerInput;
+    private String registration;
+    private int odometer;
 
 
     @Override
@@ -30,11 +32,18 @@ public class AddNewCarActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                String registration = registrationInput.getText().toString();
-                int odometer = Integer.valueOf(odometerInput.getText().toString());
-                ExistingUserActivity.getTempOwner().addNewCar(registration, odometer);
-                Intent intent = new Intent(AddNewCarActivity.this, SelectVehicleMenuActivity.class);
-                startActivity(intent);
+
+                //if (registrationInput.getText().toString() != null || registrationInput.getText().toString() != "" || odometerInput.getText().toString() != "" || odometerInput.getText().toString() != null) {
+                    registration = registrationInput.getText().toString();
+                    odometer = Integer.valueOf(odometerInput.getText().toString());
+
+
+                    ExistingUserActivity.getTempOwner().addNewCar(registration, odometer);
+                    Intent intent = new Intent(AddNewCarActivity.this, SelectVehicleMenuActivity.class);
+                    startActivity(intent);
+                //}
+
+
             }
         });
     }
