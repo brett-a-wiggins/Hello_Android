@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.InputMismatchException;
 
 
 public class AddNewCarActivity extends AppCompatActivity {
@@ -33,7 +36,7 @@ public class AddNewCarActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //if (registrationInput.getText().toString() != null || registrationInput.getText().toString() != "" || odometerInput.getText().toString() != "" || odometerInput.getText().toString() != null) {
+                try {
                     registration = registrationInput.getText().toString();
                     odometer = Integer.valueOf(odometerInput.getText().toString());
 
@@ -41,7 +44,10 @@ public class AddNewCarActivity extends AppCompatActivity {
                     ExistingUserActivity.getTempOwner().addNewCar(registration, odometer);
                     Intent intent = new Intent(AddNewCarActivity.this, SelectVehicleMenuActivity.class);
                     startActivity(intent);
-                //}
+                } catch (InputMismatchException e) {
+                    Toast.makeText(getApplicationContext(),
+                           e.getMessage(), Toast.LENGTH_LONG).show();
+                }
 
 
             }

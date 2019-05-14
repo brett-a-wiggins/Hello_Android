@@ -17,13 +17,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ViewFuelStatisticsActivity" />
         <activity android:name=".DirectoryPicker" />
         <activity android:name=".ViewReceiptsActivity" />
         <activity android:name=".CaptureReceiptActivity" />
         <activity android:name=".RemoveServiceActivity" />
         <activity android:name=".ViewServicesActivity" />
         <activity android:name=".AddNewServiceActivity" />
-        <activity android:name=".ViewFuelStatisticsActivity" />
         <activity android:name=".RemoveFuelPurchaseActivity" />
         <activity android:name=".ViewFuelPurchasesActivity" />
         <activity android:name=".AddFuelPurchaseActivity" />

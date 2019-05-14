@@ -1,6 +1,8 @@
 package com.example.hello_android;
 
 import java.math.BigDecimal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -11,21 +13,34 @@ class FuelTransaction extends Transaction {
     private int odometer;
     private double totalCost;
     private String location;
-    private Date transactionDate;
+    private String transactionDate;
     private String transaction;
     private double fuelTotal;
 
-    public FuelTransaction(String location, double totalCost, double pricePerLitre, double litres, int odometer){
+    public FuelTransaction(String location, double totalCost, double pricePerLitre, double litres, int odometer) {
         super(location, totalCost);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        try {
+            this.transactionDate = String.valueOf(getDate());
+        }catch(ParseException e){
+            e.getMessage();
+        }
         this.pricePerLitre = pricePerLitre;
         this.litres = litres;
         this.location = location;
         this.totalCost = totalCost;
         this.odometer = odometer;
-        this.transactionDate = Calendar.getInstance().getTime();
         this.fuelTotal = this.pricePerLitre * this.litres;
 
 
+    }
+
+    public String getDate() throws ParseException {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, 1);
+        SimpleDateFormat format1 = new SimpleDateFormat("EEE dd-MMMM-yyyy hh:mm:ss aa");
+        return String.valueOf(format1.format(cal.getTime()));
+// Output "Wed Sep 26 14:23:28 EST 2012
     }
 
     public double getPricePerLitre() {
@@ -68,11 +83,12 @@ class FuelTransaction extends Transaction {
         this.location = location;
     }
 
-    public Date getTransactionDate() {
+    public String getTransactionDate() {
         return this.transactionDate;
     }
 
-    public void setTransactionDate(Date transactionDate) {
+
+    public void setTransactionDate(String transactionDate) {
         this.transactionDate = transactionDate;
     }
 

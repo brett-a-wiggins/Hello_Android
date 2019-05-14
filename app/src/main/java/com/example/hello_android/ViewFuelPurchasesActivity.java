@@ -35,7 +35,9 @@ public class ViewFuelPurchasesActivity extends AppCompatActivity {
             }
         });
 
+
     }
+
 
     public ArrayList<String> populateFuelPurchasesList() {
         ArrayList<String> fuelPurchasesList = new ArrayList<>();
