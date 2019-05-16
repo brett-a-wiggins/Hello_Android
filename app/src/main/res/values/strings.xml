@@ -150,4 +150,5 @@
     <string name="p_litre2">$.p Litre</string>
     <string name="litres2">Litres</string>
     <string name="fuel_cost2">Fuel Cost</string>
+    <string name="vehicle_statistics">Statistics</string>
 </resources>
