@@ -12,7 +12,6 @@ public class MainVehicleMenuActivity extends AppCompatActivity {
     private Button serviceLogMenuButton;
     private Button receiptStorageButton;
     private Button exportDataButton;
-    private Button vehicleStatisticsButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,14 +66,6 @@ public class MainVehicleMenuActivity extends AppCompatActivity {
             }
         });
 
-        vehicleStatisticsButton = this.findViewById(R.id.statistics_data_menu_button);
-        vehicleStatisticsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainVehicleMenuActivity.this,FuelStatisticsMenuActivity.class);
-                startActivity(intent);
-            }
-        });
 
 
     }
