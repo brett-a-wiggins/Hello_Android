@@ -32,7 +32,7 @@
         <activity android:name=".ExportDataMenuActivity" />
         <activity android:name=".ServiceLogMenuActivity" />
         <activity android:name=".ReceiptStorageMenuActivity" />
-        <activity android:name=".FuelStatisticsMenuActivity" />
+        <activity android:name=".DataAnalyticsActivity" />
         <activity android:name=".FuelLogMenuActivity" />
         <activity android:name=".MainVehicleMenuActivity" />
         <activity android:name=".SelectVehicleActivity" />

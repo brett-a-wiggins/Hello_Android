@@ -17,6 +17,7 @@ class FuelTransaction extends Transaction {
     private String transaction;
     private double fuelTotal;
 
+
     public FuelTransaction(String location, double totalCost, double pricePerLitre, double litres, int odometer) {
         super(location, totalCost);
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
@@ -29,6 +30,7 @@ class FuelTransaction extends Transaction {
         this.litres = litres;
         this.location = location;
         this.totalCost = totalCost;
+        SelectVehicleActivity.getTempVehicle().setNewOdometer(odometer);
         this.odometer = odometer;
         this.fuelTotal = this.pricePerLitre * this.litres;
 

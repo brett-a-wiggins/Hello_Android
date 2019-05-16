@@ -10,12 +10,14 @@ import java.util.Date;
 
 public class Vehicle {
     private String registration;
+    private int startOdometer;
     private int odometer;
     private ArrayList<FuelTransaction> fuelTransList;
     private ArrayList<ServiceTransaction> serviceTransList;
 
-    public Vehicle (String registration) {
+    public Vehicle (String registration, int startOdometer) {
         this.registration = registration;
+        this.startOdometer = startOdometer;
         this.odometer = 0;
         this.fuelTransList = new ArrayList<>();
         this.serviceTransList = new ArrayList<>();
@@ -46,6 +48,19 @@ public class Vehicle {
 
     public ArrayList getServiceTransList() {
         return this.serviceTransList;
+    }
+
+    public void setNewOdometer(int odometer) {
+        int remaining = odometer - this.odometer;
+        this.odometer += remaining;
+    }
+
+    public int getOdometer() {
+        return this.odometer;
+    }
+
+    public int getStartOdometer() {
+        return this.startOdometer;
     }
 
 
