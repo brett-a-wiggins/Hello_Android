@@ -1,5 +1,6 @@
 package com.example.hello_android;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-public class AddNewServiceActivity extends AppCompatActivity {
+public class AddNewServiceActivity extends Activity {
     private Button submitServiceButton;
     private TextView serviceDateTextView;
     private TextView nextServiceTextView;

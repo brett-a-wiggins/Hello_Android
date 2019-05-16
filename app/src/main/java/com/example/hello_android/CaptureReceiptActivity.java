@@ -1,6 +1,7 @@
 package com.example.hello_android;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -19,7 +20,7 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class CaptureReceiptActivity extends AppCompatActivity{
+public class CaptureReceiptActivity extends AppCompatActivity {
     private Button takePictureButton;
     private ImageView photoImageView;
     private Uri file;

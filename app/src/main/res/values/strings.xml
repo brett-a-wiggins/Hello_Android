@@ -12,7 +12,7 @@
     <string name="add_truck">Add Truck</string>
     <string name="add_user">Add User</string>
 
-    <string name="app_name">Guzzle, by Hello Android</string>
+    <string name="app_name">Guzzle</string>
 
     <string name="capture_receipt">Capture Receipt</string>
 
@@ -150,4 +150,20 @@
     <string name="p_litre2">$.p Litre</string>
     <string name="litres2">Litres</string>
     <string name="fuel_cost2">Fuel Cost</string>
+    <string name="datetitle">date</string>
+    <string name="locationtitle">location</string>
+    <string name="priceperlitretitle">priceperlitre</string>
+    <string name="litrestitle">litres</string>
+    <string name="totalcosttitle">totalcost</string>
+    <string name="datetit">Date:</string>
+    <string name="locationttler">Location:</string>
+    <string name="cost_litreyy">Cost/Litre:</string>
+    <string name="litresttr">Litres:</string>
+    <string name="cost2223">Cost:</string>
+    <string name="sort_by_total_cost">Sort by total cost</string>
+    <string name="sort_by_price_litre">Sort by Price/Litre</string>
+    <string name="sort_by_location">Sort by Location</string>
+    <string name="sort_by_date">Sort by Date</string>
+    <string name="sort_by_litres">sort by litres</string>
+    <string name="sort_by_cost">sort by cost</string>
 </resources>

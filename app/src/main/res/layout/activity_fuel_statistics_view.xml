@@ -8,10 +8,88 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/fuel_stat_recycler"
-        android:layout_width="395dp"
-        android:layout_height="715dp"
+        android:layout_width="418dp"
+        android:layout_height="731dp"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#7ABCF4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/total_cost_sort_button"
+        android:layout_width="84dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/sort_by_cost"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/price_litre_sort_button"
+        android:layout_width="82dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/sort_by_price_litre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/location_sort_button" />
+
+    <Button
+        android:id="@+id/location_sort_button"
+        android:layout_width="94dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/sort_by_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/date_sort_button" />
+
+    <Button
+        android:id="@+id/date_sort_button"
+        android:layout_width="63dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/sort_by_date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fuel_stat_recycler" />
+
+    <Button
+        android:id="@+id/litres_sort_button"
+        android:layout_width="84dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/sort_by_litres"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/price_litre_sort_button" />
+
+    <SearchView
+        android:id="@+id/fuelstat_searchview"
+        style="@android:style/Widget.Material.Light.SearchView"
+        android:layout_width="306dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00E7E3E3"
+        app:layout_constraintBottom_toTopOf="@+id/price_litre_sort_button"
+        app:layout_constraintEnd_toEndOf="@+id/litres_sort_button"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="81dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="@android:string/search_go"
+        app:layout_constraintBottom_toTopOf="@+id/total_cost_sort_button"
+        app:layout_constraintStart_toEndOf="@+id/fuelstat_searchview" />
+
 </android.support.constraint.ConstraintLayout>

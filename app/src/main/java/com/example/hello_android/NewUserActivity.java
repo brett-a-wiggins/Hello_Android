@@ -1,5 +1,6 @@
 package com.example.hello_android;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class NewUserActivity extends AppCompatActivity {
+public class NewUserActivity extends Activity {
     private Button addUserButton;
     private EditText userNameText;
 

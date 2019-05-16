@@ -16,6 +16,7 @@
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="166dp"
+        android:background="#E9E9E9"
         android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@+id/priceperlitre_textview"
         app:layout_constraintTop_toTopOf="@+id/priceperlitre_textview">
@@ -30,8 +31,8 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:text="date"
-            android:textSize="11sp"
+            android:text="@string/datetitle"
+            android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -49,8 +50,8 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="2dp"
-            android:text="location"
-            android:textSize="11sp"
+            android:text="@string/locationtitle"
+            android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -66,8 +67,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:text="priceperlitre"
-            android:textSize="11sp"
+            android:text="@string/priceperlitretitle"
+            android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toTopOf="@+id/guideline3"
             tools:layout_conversion_wrapHeight="50"
@@ -79,8 +80,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:text="litres"
-            android:textSize="11sp"
+            android:text="@string/litrestitle"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.042"
             app:layout_constraintStart_toEndOf="@+id/LitresText"
@@ -95,8 +96,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:text="totalcost"
-            android:textSize="11sp"
+            android:text="@string/totalcosttitle"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.218"
             app:layout_constraintStart_toEndOf="@+id/CostText"
@@ -112,7 +113,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Date:"
+            android:text="@string/datetit"
             app:layout_constraintBottom_toTopOf="@+id/guideline4"
             app:layout_constraintEnd_toStartOf="@+id/fueldate_textview"
             app:layout_constraintHorizontal_bias="0.0"
@@ -130,7 +131,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Location: "
+            android:text="@string/locationttler"
             app:layout_constraintBottom_toTopOf="@+id/guideline3"
             app:layout_constraintEnd_toStartOf="@+id/location_textview"
             app:layout_constraintHorizontal_bias="0.0"
@@ -159,7 +160,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="12dp"
-            android:text="Cost/Litre:"
+            android:text="@string/cost_litreyy"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
@@ -168,28 +169,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="105dp" />
+            app:layout_constraintGuide_begin="90dp" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="64dp" />
+            app:layout_constraintGuide_begin="53dp" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="175dp" />
+            app:layout_constraintGuide_begin="166dp" />
 
         <TextView
             android:id="@+id/LitresText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="Litres:"
+            android:text="@string/litresttr"
             app:layout_constraintStart_toStartOf="@+id/guideline5"
             app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
@@ -207,7 +208,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="12dp"
-            android:text="Cost:"
+            android:text="@string/cost2223"
             app:layout_constraintStart_toStartOf="@+id/guideline6"
             app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
@@ -218,6 +219,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
+            android:contentDescription="@string/roadimagebackground"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logohead" />

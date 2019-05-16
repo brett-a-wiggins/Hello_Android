@@ -1,5 +1,6 @@
 package com.example.hello_android;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +11,7 @@ import android.widget.TextView;
 
 import java.math.BigDecimal;
 
-public class AddFuelPurchaseActivity extends AppCompatActivity {
+public class AddFuelPurchaseActivity extends Activity {
     private Button captureReceiptButton;
     private Button submitFuelPurchaseButton;
     private TextView fuelPriceTextView;

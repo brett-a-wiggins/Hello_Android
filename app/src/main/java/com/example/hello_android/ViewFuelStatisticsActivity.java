@@ -1,44 +1,212 @@
 package com.example.hello_android;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
-import android.widget.ListView;
+import android.widget.Button;
+import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+import java.util.Comparator;
 
-public class ViewFuelStatisticsActivity extends AppCompatActivity {
+public class ViewFuelStatisticsActivity extends Activity {
     private RecyclerView fuelStatRecycler;
     private TextView text;
+    private Button dateSortButton;
+    private Button locationSortButton;
+    private Button priceLitreSortButton;
+    private Button totalCostSortButton;
+    private Button litresSortButton;
+    private Button searchButton;
+    private SearchView fuelStatSearchView;
+    //private static FuelTransaction searchedFuelTrans;
+    private static ArrayList<FuelTransaction> tempFuelList = new ArrayList<>(SelectVehicleActivity.getTempVehicle().getFuelTransList());
 
-//    private ListView dateListView;
-//    private ListView locationListView;
-//    private ListView pricePerLitreListView;
-//    private ListView litresListView;
-//    private ListView fuelCostListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fuel_statistics_view);
-        //fuelStatRecycler = findViewById(R.id.fuel_stat_recycler);
 
-        ArrayList<FuelTransaction> data = SelectVehicleActivity.getTempVehicle().getFuelTransList();
+        final ArrayList<FuelTransaction> data = SelectVehicleActivity.getTempVehicle().getFuelTransList();
+
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.fuel_stat_recycler);
-        Recycler_View_Adapter adapter = new Recycler_View_Adapter(data, getApplication());
+        Recycler_View_Adapter_Fuel_Statistics adapter = new Recycler_View_Adapter_Fuel_Statistics(data, getApplication());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        dateSortButton = findViewById(R.id.date_sort_button);
+        locationSortButton = findViewById(R.id.location_sort_button);
+        priceLitreSortButton = findViewById(R.id.price_litre_sort_button);
+        totalCostSortButton = findViewById(R.id.total_cost_sort_button);
+        litresSortButton = findViewById(R.id.litres_sort_button);
+        searchButton = findViewById(R.id.search_button);
+        fuelStatSearchView = findViewById(R.id.fuelstat_searchview);
 
+
+        searchButton.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+
+                if (!fuelStatSearchView.getQuery().toString().isEmpty()) {
+                    tempFuelList = searchList(data, fuelStatSearchView.getQuery().toString());
+                    Intent intent = new Intent(ViewFuelStatisticsActivity.this, SearchResultsActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        locationSortButton.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+
+                sortListByLocation(data);
+                Intent intent = new Intent(ViewFuelStatisticsActivity.this, ViewFuelStatisticsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        dateSortButton.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+
+                sortListByDate(data);
+                Intent intent = new Intent(ViewFuelStatisticsActivity.this, ViewFuelStatisticsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        priceLitreSortButton.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+
+                sortListByPriceLitre(data);
+                Intent intent = new Intent(ViewFuelStatisticsActivity.this, ViewFuelStatisticsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        litresSortButton.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+
+                sortListByLitres(data);
+                Intent intent = new Intent(ViewFuelStatisticsActivity.this, ViewFuelStatisticsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        totalCostSortButton.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+
+                sortListByTotalCost(data);
+                Intent intent = new Intent(ViewFuelStatisticsActivity.this, ViewFuelStatisticsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+    }
+    public static ArrayList<FuelTransaction> getTempFuelList(){
+        return tempFuelList;
+    }
+
+    public ArrayList<FuelTransaction> searchList (ArrayList<FuelTransaction> tempFuelList, String searchTerm) {
+        ArrayList<FuelTransaction> matchingList = new ArrayList<>();
+        for (int i = 0; i < tempFuelList.size(); i++) {
+            if (tempFuelList.get(i).getLocation().toLowerCase().contains(searchTerm) || tempFuelList.get(i).getTransactionDate().toLowerCase().contains(searchTerm) || String.valueOf(tempFuelList.get(i).getPricePerLitre()).toLowerCase().contains(searchTerm) || String.valueOf(tempFuelList.get(i).getLitres()).toLowerCase().contains(searchTerm) || String.valueOf(tempFuelList.get(i).getFuelTotal()).toLowerCase().contains(searchTerm)) {
+                matchingList.add(tempFuelList.get(i));
+            }
+        }
+        return matchingList;
+    }
+
+    public void sortListByLocation(ArrayList<FuelTransaction> tempFuelTransactions) {
+        Collections.sort(tempFuelTransactions, new Comparator<FuelTransaction>() {
+            @Override
+            public int compare(FuelTransaction o1, FuelTransaction o2) {
+                return o1.getLocation().compareTo(o2.getLocation());
+            }
+        });
+    }
+
+    public void sortListByDate(ArrayList<FuelTransaction> tempFuelTransactions) {
+        Collections.sort(tempFuelTransactions, new Comparator<FuelTransaction>() {
+            @Override
+            public int compare(FuelTransaction o1, FuelTransaction o2) {
+                return o1.getTransactionDate().compareTo(o2.getTransactionDate());
+            }
+        });
+    }
+
+    public void sortListByPriceLitre(ArrayList<FuelTransaction> tempFuelTransactions) {
+        Collections.sort(tempFuelTransactions, new Comparator<FuelTransaction>() {
+            @Override
+            public int compare(FuelTransaction o1, FuelTransaction o2) {
+                if (o1.getPricePerLitre() > o2.getPricePerLitre()) {
+                    return 1;
+                }
+                if (o1.getPricePerLitre() < o2.getPricePerLitre()){
+                    return -1;
+                }
+                return 0;
+            }
+        });
+    }
+
+    public void sortListByLitres(ArrayList<FuelTransaction> tempFuelTransactions) {
+        Collections.sort(tempFuelTransactions, new Comparator<FuelTransaction>() {
+            @Override
+            public int compare(FuelTransaction o1, FuelTransaction o2) {
+                if (o1.getLitres() > o2.getLitres()) {
+                    return 1;
+                }
+                if (o1.getLitres() < o2.getLitres()){
+                    return -1;
+                }
+                return 0;
+            }
+        });
+    }
+
+    public void sortListByTotalCost(ArrayList<FuelTransaction> tempFuelTransactions) {
+        Collections.sort(tempFuelTransactions, new Comparator<FuelTransaction>() {
+            @Override
+            public int compare(FuelTransaction o1, FuelTransaction o2) {
+                if (o1.getFuelTotal() > o2.getFuelTotal()) {
+                    return 1;
+                }
+                if (o1.getFuelTotal() < o2.getFuelTotal()){
+                    return -1;
+                }
+                return 0;
+            }
+        });
+    }
+
+
+}
+
+// Old redundant code:
 //        dateListView = findViewById(R.id.date_listview);
 //        locationListView = findViewById(R.id.location_listview);
 //        pricePerLitreListView = findViewById(R.id.priceperlitre_listvieew);
@@ -165,6 +333,3 @@ public class ViewFuelStatisticsActivity extends AppCompatActivity {
 //        }
 //        return fuelFuelCostList;
 //    }
-
-    }
-}

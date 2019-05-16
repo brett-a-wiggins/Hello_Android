@@ -10,12 +10,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder> {
+public class Recycler_View_Adapter_Fuel_Statistics extends RecyclerView.Adapter<View_Holder> {
 
     ArrayList<FuelTransaction> list = SelectVehicleActivity.getTempVehicle().getFuelTransList();
     Context context;
 
-    public Recycler_View_Adapter(ArrayList<FuelTransaction> list, Context context) {
+    public Recycler_View_Adapter_Fuel_Statistics(ArrayList<FuelTransaction> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -35,9 +35,9 @@ public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder> {
         //Use the provided View Holder on the onCreateViewHolder method to populate the current row on the RecyclerView
         holder.fuelDateTextView.setText(list.get(position).getTransactionDate().toString());
         holder.fuelLocationTextView.setText(list.get(position).getLocation());
-        holder.fuelPricePerLitreTextView.setText("$" + String.valueOf(list.get(position).getPricePerLitre()));
-        holder.fuelLitresTextView.setText(String.valueOf(list.get(position).getLitres()));
-        holder.fuelCostTextView.setText("$" + String.valueOf(list.get(position).getFuelTotal()));
+        holder.fuelPricePerLitreTextView.setText(String.format("$%.2f" ,list.get(position).getPricePerLitre()));
+        holder.fuelLitresTextView.setText(String.format("%.2f",list.get(position).getLitres()));
+        holder.fuelCostTextView.setText(String.format("$%.2f",list.get(position).getFuelTotal()));
 
         //animate(holder);
 
