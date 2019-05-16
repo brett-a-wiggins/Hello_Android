@@ -1,5 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView35"
+        android:contentDescription="@string/content_descr"
+        android:layout_width="175dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="264dp"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="131dp"
+        android:layout_height="41dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="50dp"
+        android:background="#76BAF4"
+        android:text="@string/stat_date_range"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="@+id/imageView35"
+        app:layout_constraintTop_toBottomOf="@+id/imageView35" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="131dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="342dp"
+        android:background="#76BAF4"
+        android:text="@string/stat_loc_range"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <ImageView
+        android:id="@+id/imageView37"
+        android:contentDescription="@string/content_descr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kisspng_road_royalty_free_illustration_landmarks_road_vector_5a86178550f0d3_7634598815187372853315" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="131dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="256dp"
+        android:background="#76BAF4"
+        android:text="@string/view_all"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView35" />
+
+</android.support.constraint.ConstraintLayout>

@@ -151,4 +151,8 @@
     <string name="litres2">Litres</string>
     <string name="fuel_cost2">Fuel Cost</string>
     <string name="vehicle_statistics">Statistics</string>
+    <string name="stat_date_range">View by date</string>
+    <string name="stat_loc_range">View by location</string>
+    <string name="view_all">View All</string>
+
 </resources>
