@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.math.BigDecimal;
 
@@ -59,13 +60,43 @@ public class AddFuelPurchaseActivity extends Activity {
 
             @Override
             public void onClick(View v) {
+                double totalCost = 0, pricePerLitre = 0, fuelAmount = 0;
+                int odometer = 0;
 
                 Intent intent = new Intent(AddFuelPurchaseActivity.this, FuelLogMenuActivity.class);
-                double totalCost = Double.valueOf(totalCostTextView.getText().toString());
-                double pricePerLitre = Double.valueOf(fuelPriceTextView.getText().toString());
-                double fuelAmount = Double.valueOf(fuelAmountTextView.getText().toString());
-                int odometer = Integer.valueOf(odometerReadingTextView.getText().toString());
-                SelectVehicleActivity.getTempVehicle().addFuelTransaction(fillUpLocationTextView.getText().toString(), totalCost, pricePerLitre, fuelAmount, odometer);
+                if (fuelPriceTextView.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "You did not enter a price per litre", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    pricePerLitre = Double.valueOf(fuelPriceTextView.getText().toString());
+                }
+                if (fuelAmountTextView.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "You did not enter amount of litres", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    fuelAmount = Double.valueOf(fuelAmountTextView.getText().toString());
+                }
+                String location = fillUpLocationTextView.getText().toString();
+                if (location.matches("")) {
+                    Toast.makeText(getApplicationContext(), "You did not enter a location", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (odometerReadingTextView.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "You did not enter an odometer", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    odometer = Integer.valueOf(odometerReadingTextView.getText().toString());
+                }
+                if (totalCostTextView.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "You did not enter a total cost", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    totalCost = Double.valueOf(totalCostTextView.getText().toString());
+                }
+
+
+
+                SelectVehicleActivity.getTempVehicle().addFuelTransaction(location, totalCost, pricePerLitre, fuelAmount, odometer);
                 startActivity(intent);
             }
         });

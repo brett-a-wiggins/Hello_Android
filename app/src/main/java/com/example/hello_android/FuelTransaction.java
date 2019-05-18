@@ -16,11 +16,12 @@ class FuelTransaction extends Transaction {
     private String transactionDate;
     private String transaction;
     private double fuelTotal;
+    private SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy");
 
 
     public FuelTransaction(String location, double totalCost, double pricePerLitre, double litres, int odometer) {
         super(location, totalCost);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+//        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         try {
             this.transactionDate = String.valueOf(getDate());
         }catch(ParseException e){
@@ -111,7 +112,7 @@ class FuelTransaction extends Transaction {
     }
 
     public String getFuelTransactionString(){
-        this.transaction = "Location: " + this.location + ", Date: " + this.transactionDate + ", P.p.Litre: $" + this.pricePerLitre + ", Litres: " + this.litres + ", Odometer: " + this.odometer + ", Cost: $" + this.fuelTotal + ", Total Cost: $" + this.totalCost;
+        this.transaction = "Location: " + this.location + ", Date: " + this.transactionDate + ", P.p.Litre: " + String.format("$%.2f" ,this.pricePerLitre) + ", Litres: " + String.format("%.2f",this.litres) + ", Odometer: " + this.odometer + ", Cost: " + String.format("$%.2f" ,this.fuelTotal) + ", Total Cost: " + String.format("$%.2f",this.totalCost);
         return transaction;
     }
 
