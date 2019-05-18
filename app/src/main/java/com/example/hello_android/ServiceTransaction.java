@@ -82,7 +82,7 @@ public class ServiceTransaction extends Transaction {
     }
 
     public String getServiceTransactionString(){
-        this.transaction = "Service Date: " + this.serviceDate + ", Next Date: " + this.nextServiceDate + ", Labor Cost: $" + this.laborCost + ", Part Cost: " + this.partCost + ", Next Service Odometer: " + this.nextServiceOdo +  ", Total Cost: $" + (this.laborCost + this.partCost);
+        this.transaction = "Service Date: " + this.serviceDate + ", Next Date: " + this.nextServiceDate + ", Labor Cost: " + String.format("$%.2f" ,this.laborCost) + ", Part Cost: " + String.format("$%.2f" ,this.partCost) + ", Next Service Odometer: " + this.nextServiceOdo +  ", Total Cost: " + String.format("$%.2f",(this.laborCost + this.partCost));
         return transaction;
     }
 

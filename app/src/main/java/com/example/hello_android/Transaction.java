@@ -20,4 +20,8 @@ abstract class Transaction {
         this.transactionDate = transactionDate;
         this.totalCost = totalCost;
     }
+
+    public Transaction( double totalCost) {
+        this.totalCost = totalCost;
+    }
 }

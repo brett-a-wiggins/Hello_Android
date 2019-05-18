@@ -23,6 +23,7 @@ public class AddNewServiceActivity extends Activity {
     private TextView laborCostTextView;
     private TextView partCostTextView;
     private TextView nextOdometerTextView;
+    private SimpleDateFormat format1 = new SimpleDateFormat("ddMMyy");
 
 
     @Override
@@ -44,32 +45,28 @@ public class AddNewServiceActivity extends Activity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(AddNewServiceActivity.this, ServiceLogMenuActivity.class);
-                Date serviceDate = new Date();
-                Date nextServiceDate = new Date();
+                double laborCost = 0, partCost = 0;
+                int nextServiceOdometer = 0;
                 String servDate = serviceDateTextView.getText().toString();
-                if (servDate.matches("")) {
+
+                if (serviceDateTextView.getText().toString().matches("")) {
                     Toast.makeText(getApplicationContext(), "You did not enter a service date", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                SimpleDateFormat servInput = new SimpleDateFormat("dd/MM/yy");
-                double laborCost = 0, partCost = 0;
-                int nextServiceOdometer = 0;
-                try {
-                    serviceDate = servInput.parse(servDate);                 // parse input
-                } catch (ParseException e) {
-                    e.printStackTrace();
+                if (serviceDateTextView.getText().toString().length() > 6 || serviceDateTextView.getText().toString().length() <= 0){
+                    Toast.makeText(getApplicationContext(), "Service date is not equal to six numbers", Toast.LENGTH_SHORT).show();
+                    return;
                 }
                 String nextServDate = nextServiceTextView.getText().toString();
                 if (nextServDate.matches("")) {
                     Toast.makeText(getApplicationContext(), "You did not enter a next service date", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                SimpleDateFormat nextServInput = new SimpleDateFormat("dd/MM/yy");
-                try {
-                    nextServiceDate = nextServInput.parse(nextServDate);                 // parse input
-                } catch (ParseException e) {
-                    e.printStackTrace();
+                if (nextServDate.length() > 6 || nextServDate.length() <= 0){
+                    Toast.makeText(getApplicationContext(), "Next Service date is not equal to six numbers", Toast.LENGTH_SHORT).show();
+                    return;
                 }
+
                 if (laborCostTextView.getText().toString().trim().isEmpty()) {
                     Toast.makeText(getApplicationContext(), "You did not enter a labor cost", Toast.LENGTH_SHORT).show();
                     return;
@@ -91,7 +88,11 @@ public class AddNewServiceActivity extends Activity {
                     nextServiceOdometer = Integer.valueOf(nextOdometerTextView.getText().toString());
                 }
 //                int nextServiceOdometer = Integer.valueOf(nextOdometerTextView.getText().toString());
-                SelectVehicleActivity.getTempVehicle().addServiceTransaction(serviceDate, nextServiceDate, laborCost, partCost, nextServiceOdometer);
+                try {
+                    SelectVehicleActivity.getTempVehicle().addServiceTransaction(format1.parse(servDate), format1.parse(nextServDate), laborCost, partCost, nextServiceOdometer);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
                 startActivity(intent);
             }
         });
