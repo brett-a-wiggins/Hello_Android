@@ -39,8 +39,17 @@ public class AddNewCarActivity extends AppCompatActivity {
 
                 try {
                     registration = registrationInput.getText().toString();
-                    odometer = Integer.valueOf(odometerInput.getText().toString());
+                    if (registration.matches("")) {
+                        Toast.makeText(getApplicationContext(), "You did not enter a registration", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
 
+                    if (odometerInput.getText().toString().trim().isEmpty()) {
+                        Toast.makeText(getApplicationContext(), "You did not enter an odometer value", Toast.LENGTH_SHORT).show();
+                        return;
+                    } else {
+                        odometer = Integer.valueOf(odometerInput.getText().toString());
+                    }
 
                     ExistingUserActivity.getTempOwner().addNewCar(registration, odometer);
                     Intent intent = new Intent(AddNewCarActivity.this, SelectVehicleMenuActivity.class);

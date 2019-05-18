@@ -1,6 +1,7 @@
 package com.example.hello_android;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ServiceTransaction extends Transaction {
@@ -9,18 +10,19 @@ public class ServiceTransaction extends Transaction {
    private double totalCost;
    private double partCost;
    private int nextServiceOdo;
-   private Date serviceDate;
-   private Date nextServiceDate;
+   private String serviceDate;
+   private String nextServiceDate;
    private String transaction;
+   private SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yy");
 
    public ServiceTransaction(Date transactionDate, Date nextServiceDate, double laborCost, double partCost, int nextServiceOdo) {
        super(transactionDate, (laborCost + partCost));
        this.laborCost = laborCost;
        this.partCost = partCost;
-       this.serviceDate = transactionDate;
+       this.serviceDate = format1.format(transactionDate);
        this.totalCost = this.laborCost + this.partCost;
        this.nextServiceOdo = nextServiceOdo;
-       this.nextServiceDate = nextServiceDate;
+       this.nextServiceDate = format1.format(nextServiceDate);
    }
 
     public double getLaborCost() {
@@ -55,20 +57,20 @@ public class ServiceTransaction extends Transaction {
         this.nextServiceOdo = nextServiceOdo;
     }
 
-    public Date getServiceDate() {
+    public String getServiceDate() {
         return serviceDate;
     }
 
     public void setServiceDate(Date serviceDate) {
-        this.serviceDate = serviceDate;
+        this.serviceDate = format1.format(serviceDate);
     }
 
-    public Date getNextServiceDate() {
+    public String getNextServiceDate() {
         return nextServiceDate;
     }
 
     public void setNextServiceDate(Date nextServiceDate) {
-        this.nextServiceDate = nextServiceDate;
+        this.nextServiceDate = format1.format(nextServiceDate);
     }
 
     public String getTransaction() {

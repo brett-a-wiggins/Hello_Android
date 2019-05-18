@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class NewUserActivity extends Activity {
     private Button addUserButton;
@@ -30,11 +31,14 @@ public class NewUserActivity extends Activity {
             @Override
             public void onClick(View v) {
                 String userName =  userNameText.getText().toString();
-                if (userName != null) {
-                    MainIntentActivity.ownerList.add(new VehicleOwner(userNameText.getText().toString()));
-                    Intent intent = new Intent(NewUserActivity.this, MainIntentActivity.class);
-                    startActivity(intent);
+                if (userName.matches("")) {
+                    Toast.makeText(getApplicationContext(), "You did not enter a User name", Toast.LENGTH_SHORT).show();
+                    return;
                 }
+
+                MainIntentActivity.ownerList.add(new VehicleOwner(userNameText.getText().toString()));
+                Intent intent = new Intent(NewUserActivity.this, MainIntentActivity.class);
+                startActivity(intent);
             }
         });
     }

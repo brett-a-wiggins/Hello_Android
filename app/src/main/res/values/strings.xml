@@ -187,5 +187,6 @@
     <string name="avgservicecost">avgservicecost</string>
     <string name="total_spent_on_services">Total spent on services:</string>
     <string name="servicetotal">servicetotal</string>
+    <string name="service_date_dd_mm_yy">Service Date dd/mm/yy</string>
 
 </resources>

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -46,23 +47,50 @@ public class AddNewServiceActivity extends Activity {
                 Date serviceDate = new Date();
                 Date nextServiceDate = new Date();
                 String servDate = serviceDateTextView.getText().toString();
+                if (servDate.matches("")) {
+                    Toast.makeText(getApplicationContext(), "You did not enter a service date", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 SimpleDateFormat servInput = new SimpleDateFormat("dd/MM/yy");
+                double laborCost = 0, partCost = 0;
+                int nextServiceOdometer = 0;
                 try {
                     serviceDate = servInput.parse(servDate);                 // parse input
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-                String nextServDate = serviceDateTextView.getText().toString();
+                String nextServDate = nextServiceTextView.getText().toString();
+                if (nextServDate.matches("")) {
+                    Toast.makeText(getApplicationContext(), "You did not enter a next service date", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 SimpleDateFormat nextServInput = new SimpleDateFormat("dd/MM/yy");
                 try {
                     nextServiceDate = nextServInput.parse(nextServDate);                 // parse input
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-
-                double laborCost = Double.valueOf(laborCostTextView.getText().toString());
-                double partCost = Double.valueOf(partCostTextView.getText().toString());
-                int nextServiceOdometer = Integer.valueOf(nextOdometerTextView.getText().toString());
+                if (laborCostTextView.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "You did not enter a labor cost", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    laborCost = Double.valueOf(laborCostTextView.getText().toString());
+                }
+//                double laborCost = Double.valueOf(laborCostTextView.getText().toString());
+                if (partCostTextView.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "You did not enter a part cost", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    partCost = Double.valueOf(partCostTextView.getText().toString());
+                }
+//                double partCost = Double.valueOf(partCostTextView.getText().toString());
+                if (nextOdometerTextView.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "You did not enter an odometer", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    nextServiceOdometer = Integer.valueOf(nextOdometerTextView.getText().toString());
+                }
+//                int nextServiceOdometer = Integer.valueOf(nextOdometerTextView.getText().toString());
                 SelectVehicleActivity.getTempVehicle().addServiceTransaction(serviceDate, nextServiceDate, laborCost, partCost, nextServiceOdometer);
                 startActivity(intent);
             }
