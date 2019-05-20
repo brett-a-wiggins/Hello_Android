@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class NewUserActivity extends Activity {
+public class NewUserActivity extends AppCompatActivity {
     private Button addUserButton;
     private EditText userNameText;
 

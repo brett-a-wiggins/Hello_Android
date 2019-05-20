@@ -16,7 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-public class AddNewServiceActivity extends Activity {
+public class AddNewServiceActivity extends AppCompatActivity {
     private Button submitServiceButton;
     private TextView serviceDateTextView;
     private TextView nextServiceTextView;

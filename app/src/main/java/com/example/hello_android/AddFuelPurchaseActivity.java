@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import java.math.BigDecimal;
 
-public class AddFuelPurchaseActivity extends Activity {
+public class AddFuelPurchaseActivity extends AppCompatActivity {
     private Button captureReceiptButton;
     private Button submitFuelPurchaseButton;
     private TextView fuelPriceTextView;
